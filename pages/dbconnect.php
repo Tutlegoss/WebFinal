@@ -1,5 +1,5 @@
 <?php
-	require_once('../pdoconfig.php');
+	require_once('../databaseConfig.php');
 
 	$conn = new mysqli($servername, $username, $password, $database);
 
