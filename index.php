@@ -1,20 +1,27 @@
-<!DOCTYPE html>
+<?php require_once('./inc/header.inc.php'); ?>
 
-<html lang="en">
-<head>
-	<title>Tester</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-    <link rel="stylesheet" href="./inc/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-	<link href="./inc/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet"/> 
-	<script src="./inc/bootstrap-4.4.1-dist/js/jquery-3.4.1.min.js"></script>
-	<script src="./inc/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-</head>
+	<div id="carouselSwitch" class="carousel slide carousel-fade" data-ride="carousel">
+	  <div class="carousel-inner">
+		<div class="carousel-item active">
+		  <img src="art.jpg" class="d-block w-100 carousel-height" alt="...">
+		  <div class="carousel-caption d-none d-md-block">
+			<h5 class="captionBkgnd">First slide label</h5>
+			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+		  </div>
+		</div>
+		<div class="carousel-item">
+		  <img src="Australia.jpg" class="d-block w-100 carousel-height" alt="...">
+		</div>
+		<div class="carousel-item">
+		  <img src="art.jpg" class="d-block w-100 carousel-height" alt="...">
+		</div>
+	  </div>
+	  <a class="carousel-control-prev" href="#carouselSwitch" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselSwitch" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  </a>
+	</div>
 
-<body>
-	<i class="fas fa-search"></i>
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
-</body>
-</html>
+<?php require_once('./inc/footer.inc.php'); ?>

@@ -1,0 +1,129 @@
+/* Variables */
+:root {
+	--tan:        #E8DDCB;
+	--brown:      #CDB380;
+	--teal:       #036564;
+	--crepuscule: #033649;
+	--navy:       #031634;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: var(--tan); 
+	font-family: 'Patua One', monospace;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+footer {
+	flex-shrink: 0;
+	padding: 10px;
+	color: white;
+	border-top: 3px solid transparent; 
+	background-color: var(--navy); 
+	font-size: 0.9rem;
+	color: var(--tan);
+}
+
+footer p {
+	height: 41.5px;
+	line-height: 41.5px;
+}
+
+/* Must wrap web page's content within <div class="content"> ... </div> to make footer stay on bottom */
+.content {
+	flex: 1 0 auto;
+}
+
+/* This came from the Bootstrap V4.4.1 source file bootstrap.css and I modified it so
+   the navbar collapsed at 834px to conform to my navbar style                        */
+@media (min-width: 834px) 
+{
+	.navbar-expand-834 {
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+	.navbar-expand-834 .navbar-nav {
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	.navbar-expand-834 .navbar-nav .dropdown-menu {
+		position: absolute;
+	}
+	.navbar-expand-834 .navbar-nav .nav-link {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+	}
+	.navbar-expand-834 > .container,
+	.navbar-expand-834 > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+	.navbar-expand-834 .navbar-collapse {
+		display: -ms-flexbox !important;
+		display: flex !important;
+		-ms-flex-preferred-size: auto;
+		flex-basis: auto;
+	}
+	.navbar-expand-834 .navbar-toggler {
+		display: none;
+	}
+}
+
+.navbar {
+	background-color: var(--navy);
+}
+
+.navDrop {
+	background-color: rgba(3,22,52,0.92);
+	border: 2px solid white;
+}
+	
+.navDrop a, .navbar-toggler {
+	color: var(--tan);
+}
+
+.navDrop a:hover {
+	color: var(--tan);
+	background-color: var(--teal);
+}
+
+.navbar-toggler {
+	border-color: var(--tan);
+}
+
+.nav-item a {
+	padding-left: 5px !important;
+	font-size: 1.2rem;
+	color: var(--tan);
+}
+
+nav img, footer img {
+	width: 90px; 
+	height: 40px;
+}
+
+input#search {
+	border-radius: 0;
+}
+
+.btnArt {
+	color: white;
+	background-color: var(--crepuscule);
+	border-color: white;
+	border-radius: 0;
+}
+
+.carousel-height {
+	height:598px;
+}
+.captionBkgnd {
+	background-color: rgba(0,0,0,0.3);
+}
