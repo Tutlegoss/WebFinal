@@ -1,4 +1,4 @@
-/* Variables */
+/* Variables https://www.colourlovers.com/palette/292482/Terra */
 /* --------------------------------------------------------*/
 :root {
 	--tan:        #E8DDCB;
@@ -139,6 +139,25 @@ input#search {
 	border-radius: 0;
 }
 
+/* leftPanel.inc.php Styles */
+/* --------------------------------------------------------*/
+#left .card-header {
+	background-color: var(--navy);
+	color: white;
+}
+
+#left ul li {
+	background-color: rgba(3,101,100,0.65);
+}
+
+#left ul li a {
+	color: white;
+}
+
+#left ul li a:hover {
+	color: var(--tan);
+}
+	
 /* index.php Styles */
 /* --------------------------------------------------------*/
 .carousel-height {

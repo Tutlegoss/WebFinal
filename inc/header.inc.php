@@ -52,7 +52,7 @@
 		  </div>
 		</nav>
 		<nav class="navbar navbar-expand-834" style="margin-top: -18px">
-			<a class="navbar-brand" href="localhost/C-S/index.php"><img src="<?php echo $dir; ?>img/artLogo.png" alt="Art Pallet Logo"></a>
+			<a class="navbar-brand" href="/index.php"><img src="<?php echo $dir; ?>img/artLogo.png" alt="Art Pallet Logo"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
 					aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle naviation">
 				<i class="fas fa-bars"></i>
@@ -60,7 +60,7 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav nav nav-pills mr-auto mt-0">	
 					<li class="nav-item">
-						<a class="nav-link mr-2" href="#">Home</a>
+						<a class="nav-link mr-2" href="/index.php">Home</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link mr-2" href="/pages/AboutUs.php">About Us</a>

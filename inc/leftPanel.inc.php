@@ -1,12 +1,12 @@
 <?php require_once($dir . "inc/dbGet.php"); ?>
-	<div class="col-12 col-lg-2">
+	<div class="col-12 col-lg-2" id="left">
 		<div class="row">
 			<div class="col-4 col-lg-12 pb-3 sidePanel">
 				<div class="card mt-3">
 					<div class="card-header text-center">
 						Continents
 					</div>
-					<ul class="list-group list-group-flush ml-1">
+					<ul class="list-group list-group-flush>
 						<?php 
 							$continentNames = getContinentNames();
 							foreach($continentNames as $cn)
@@ -22,7 +22,7 @@
 					<div class="card-header text-center">
 						Countries
 					</div>
-					<ul class="list-group list-group-flush ml-1">
+					<ul class="list-group list-group-flush">
 						<?php 
 							$countryNames = getCountryNames();
 							foreach($countryNames as $cn)
@@ -38,7 +38,7 @@
 					<div class="card-header text-center">
 						Cities
 					</div>
-					<ul class="list-group list-group-flush ml-1">
+					<ul class="list-group list-group-flush">
 						<?php 
 							$cityNames = getCityNames();
 							foreach($cityNames as $cn)
