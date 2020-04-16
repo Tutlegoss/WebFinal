@@ -1,4 +1,5 @@
 /* Variables */
+/* --------------------------------------------------------*/
 :root {
 	--tan:        #E8DDCB;
 	--brown:      #CDB380;
@@ -7,6 +8,8 @@
 	--navy:       #031634;
 }
 
+/* Overall site style */
+/* --------------------------------------------------------*/
 html {
 	height: 100%;
 }
@@ -38,6 +41,29 @@ footer p {
 /* Must wrap web page's content within <div class="content"> ... </div> to make footer stay on bottom */
 .content {
 	flex: 1 0 auto;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.btnArt {
+	color: white;
+	background-color: var(--crepuscule);
+	border-color: white;
+	border-radius: 0;
+}
+
+/* Navbar Styles */
+/* --------------------------------------------------------*/
+header nav:first-child {
+	font-size: 0.87rem;
+	background-color: var(--tan);
+	margin-top: -5px
+}
+
+header nav:first-child a {
+	color: var(--teal);
 }
 
 /* This came from the Bootstrap V4.4.1 source file bootstrap.css and I modified it so
@@ -77,7 +103,7 @@ footer p {
 	}
 }
 
-.navbar {
+header .navbar:not(:first-child) {
 	background-color: var(--navy);
 }
 
@@ -99,9 +125,8 @@ footer p {
 	border-color: var(--tan);
 }
 
-.nav-item a {
+header nav:not(:first-child) .nav-item a {
 	padding-left: 5px !important;
-	font-size: 1.2rem;
 	color: var(--tan);
 }
 
@@ -114,13 +139,8 @@ input#search {
 	border-radius: 0;
 }
 
-.btnArt {
-	color: white;
-	background-color: var(--crepuscule);
-	border-color: white;
-	border-radius: 0;
-}
-
+/* index.php Styles */
+/* --------------------------------------------------------*/
 .carousel-height {
 	height:598px;
 }

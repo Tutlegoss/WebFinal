@@ -9,8 +9,10 @@
 <html lang="en">
 <head>
 	<!-- Start php session so session variables are available -->
-	<?php session_start(); 
-		  ob_start();
+	<?php 
+		if(!isset($_SESSION)) 
+			session_start(); 
+		ob_start();
 	?>
 	<title>Web Final Art Store</title>
 	<meta charset="utf-8">
@@ -18,10 +20,10 @@
 	<meta name="keywords" content="meta description, Web, Final, Art, Kent, State, Stark">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./inc/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-	<link href="./inc/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet"/> 
-	<script src="./inc/bootstrap-4.4.1-dist/js/jquery-3.4.1.min.js"></script>
-	<script src="./inc/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<?php echo $dir; ?>inc/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link href="<?php echo $dir; ?>inc/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet"/> 
+	<script src="<?php echo $dir; ?>inc/bootstrap-4.4.1-dist/js/jquery-3.4.1.min.js"></script>
+	<script src="<?php echo $dir; ?>inc/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="<?php echo $dir; ?>css/site.css">
 	<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet"> 
@@ -31,8 +33,25 @@
 <body>
 <div class="content">
 	<header>
-		<p>alskdfj</p>
-		<nav class="navbar navbar-expand-834">
+		<nav class="navbar navbar-expand">
+		  <div class="navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="#">View Favorites List</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">My Account</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Register</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Login</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+		<nav class="navbar navbar-expand-834" style="margin-top: -18px">
 			<a class="navbar-brand" href="localhost/C-S/index.php"><img src="<?php echo $dir; ?>img/artLogo.png" alt="Art Pallet Logo"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
 					aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle naviation">
@@ -47,7 +66,7 @@
 						<a class="nav-link mr-2" href="#">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link mr-2" href="#">Search</a>
+						<a class="nav-link mr-2" href="#">Advanced Search</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle nav-item btnArt" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse</a>
