@@ -147,3 +147,20 @@ input#search {
 .captionBkgnd {
 	background-color: rgba(0,0,0,0.3);
 }
+
+/* AboutUs.php Styles */
+/* --------------------------------------------------------*/
+#about-us {
+	color: var(--tan);
+	background-color: rgba(3,54,73,0.90);
+	border: 2px solid white;
+}
+
+#about-us table thead {
+	color: white;
+	font-size: 1.1rem;
+}
+
+#about-us table tbody {
+	color: var(--tan);
+}
