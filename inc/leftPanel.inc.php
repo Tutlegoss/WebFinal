@@ -6,7 +6,7 @@
 					<div class="card-header text-center">
 						Continents
 					</div>
-					<ul class="list-group list-group-flush>
+					<ul class="list-group list-group-flush">
 						<?php 
 							$continentNames = getContinentNames();
 							foreach($continentNames as $cn)
