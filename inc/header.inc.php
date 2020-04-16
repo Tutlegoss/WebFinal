@@ -63,7 +63,7 @@
 						<a class="nav-link mr-2" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link mr-2" href="#">About Us</a>
+						<a class="nav-link mr-2" href="/pages/AboutUs.php">About Us</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link mr-2" href="#">Advanced Search</a>
