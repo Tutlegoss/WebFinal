@@ -1,5 +1,5 @@
 <?php
-	if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] === "/WebFinal/index.php")
+	if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] === "")
 		$dir = "./";
 	else
 		$dir = "../";
