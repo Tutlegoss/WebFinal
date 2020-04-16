@@ -2,7 +2,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<?php include("./inc/leftPanel.inc.php"); ?>
+			<?php  include("./inc/leftPanel.inc.php"); ?>
 			
 			<div class="col-12 col-lg-10 no-padding mt-3">
 				<div id="carouselSwitch" class="carousel slide carousel-fade" data-ride="carousel">
