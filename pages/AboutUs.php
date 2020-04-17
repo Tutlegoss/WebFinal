@@ -4,11 +4,11 @@
 		<div class="row">
 			<?php include("../inc/leftPanel.inc.php"); ?>
 			
-			<div class="col-12 col-lg-10 mt-3 mb-3" id="about-us">
+			<div class="col-12 col-lg-10 mt-3 mb-3">
 				<h3 class="mt-3 ml-3 text-center"> 
 					Hypothetical Website for CS 44106 - WP2 at Kent State University taught by Dr A. Guercio
 				</h3>
-				<table class="table table-striped mt-5">
+				<table class="table table-striped mt-5" id="about-us">
 					<thead>
 						<tr>
 							<th scope="col">Name</th>
