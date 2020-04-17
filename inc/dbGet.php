@@ -132,3 +132,26 @@
 			write2Error_Log("getImageName(): " . $e);
 		}		
 	}
+	
+	function getNewAdditions()
+	{
+		global $conn;
+		try {
+			if(!($sql_new = $conn->prepare("SELECT   Path, ImageID
+				                            FROM     travelimage
+										    ORDER BY ImageID DESC"))) {
+				write2Error_Log("SELECT Path, ImageID in function getNewAdditions()");
+				return;
+			}
+			
+			$sql_new->execute();
+			$res_new = $sql_new->get_result();
+
+			for($i = 0; $i < 10; ++$i) 
+				$returned_Data[] = $res_new->fetch_assoc();
+			return $returned_Data;			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getTopRated(): " . $e);
+		}
+	}
