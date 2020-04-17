@@ -85,3 +85,50 @@
 			write2Error_Log("getCityNames(): " . $e);
 		}
 	}
+	
+	function getTopRated()
+	{
+		global $conn;
+		try {
+			if(!($sql_rated = $conn->prepare("SELECT   ImageID, AVG(Rating), COUNT(Rating)
+				                              FROM     travelimagerating
+										      GROUP BY ImageID
+											  ORDER BY AVG(Rating) DESC"))) {
+				write2Error_Log("SELECT ImageID, AVG(Rating), COUNT(Rating) in function getTopRated()");
+				return;
+			}
+			
+			$sql_rated->execute();
+			$res_rated = $sql_rated->get_result();
+
+			for($i = 0; $i < 10; ++$i) 
+				$returned_Data[] = $res_rated->fetch_assoc();
+			
+			return $returned_Data;			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getTopRated(): " . $e);
+		}
+	}
+	
+	function getImageName($ImageID)
+	{
+		global $conn;
+		try {
+			if(!($sql_img = $conn->prepare("SELECT Path, Title
+				                            FROM   travelimage JOIN travelimagedetails
+											ON     travelimage.ImageID = travelimagedetails.ImageID
+										    WHERE  travelimage.ImageID = $ImageID"))) {
+				write2Error_Log("SELECT Path, Title in function getImageName()");
+				return;
+			}
+			
+			$sql_img->execute();
+			$res_img = $sql_img->get_result();
+
+			return $res_img->fetch_assoc();
+		}
+		catch (Exception $e) {
+			write2Error_Log("getImageName(): " . $e);
+		}		
+	}
