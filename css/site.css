@@ -163,8 +163,14 @@ input#search {
 .carousel-height {
 	height:598px;
 }
+
 .captionBkgnd {
 	background-color: rgba(0,0,0,0.3);
+}
+
+#indexRating, #newAdditions {
+	color: var(--navy);
+	border: 2px solid var(--teal);
 }
 
 /* AboutUs.php Styles */

@@ -43,7 +43,7 @@
 							$cityNames = getCityNames();
 							foreach($cityNames as $cn)
 								echo "<li class='list-group-item'>
-										  <a href=#> $cn </a>
+										  <a href='#'> $cn </a>
 									  </li>";
 						?>					
 					</ul>

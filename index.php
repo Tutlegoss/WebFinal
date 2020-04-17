@@ -60,21 +60,32 @@
 							</tbody>
 						</table>	
 					</div>
-					<div class="col-6">		
-						<div class="card mt-3">
-							<div class="card-header text-center">
-								Continents
-							</div>
-							<ul class="list-group list-group-flush">
-								<?php 
-									$continentNames = getContinentNames();
-									foreach($continentNames as $cn)
-										echo "<li class='list-group-item'>
-												  <a href=#> $cn </a>
-											  </li>";
-								?>					
-							</ul>
-						</div>	
+					<div class="col-6 mt-3">		
+						<table class="table mb-0" id="newAdditions">
+							<tr class="text-center">
+								<th colspan="2">New Additions</td>
+							</tr>
+							<?php 
+								$newImages = getNewAdditions(); 
+								
+								for($i = 0, $j = 1; $i < 10; $i += 2, $j += 2) { 
+									$imageNameLeft  = getImageName($newImages[$i]['ImageID']);
+									$imageNameRight = getImageName($newImages[$j]['ImageID']);
+									echo 	"<tr>
+												<td class='text-center'>
+													$imageNameLeft[Title]
+													<img src='./img/square-medium/$imageNameLeft[Path]' class='d-block m-auto'>
+													<span style='color: #E8DDCB'>_</span>
+												</td>
+												<td class='text-center'>
+													$imageNameRight[Title]
+													<img src='./img/square-medium/$imageNameRight[Path]' class='d-block m-auto'>
+													<span style='color: #E8DDCB'>_</span>
+												</td>
+											 </tr>"; 
+								}				
+							?> 					
+						</table>	
 					</div>
 				</div>
 			</div>
