@@ -30,6 +30,7 @@ a{
 	<div class="row">
 <div class="col-lg-6 modal-photos">
 <?php
+	/*
 require_once('../inc/dbconnect.php');
 if(isset($_POST['search'])){
 		$fil=$_POST['search'];
@@ -71,7 +72,7 @@ echo '<a href="#" style="background-color:white; border-color:white"  class="btn
 	
 echo "<p>".$row['Description']."</p>"; 
 ?>
-
+*/
 </div>
 
 <div class="modal fade popup"  role="dialog"  aria-hidden="true">
