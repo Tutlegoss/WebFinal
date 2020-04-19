@@ -24,8 +24,8 @@ a{
 
 
 <main class="container">
-	<div class="row">
-<div class="col-lg-6 id="right">
+	<!--<div class="row">-->
+<div class="col-lg-6 >
 <?php
 require_once('../inc/dbconnect.php');
 $_ID="";
@@ -74,7 +74,7 @@ echo "<p>".$row['Message']."</p>";
 
 
 
-?></div></div></div>
+?></div></div><!--</div>-->
 	
 </aside>
 </div></div>
