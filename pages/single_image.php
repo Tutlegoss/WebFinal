@@ -3,8 +3,8 @@
 
 <?php
 ob_start();
-require_once("../inc/header.inc.php");
-include("../inc/leftPanel.inc.php");
+//require_once("../inc/header.inc.php");
+//include("../inc/leftPanel.inc.php");
 ?>
 
 
@@ -138,7 +138,7 @@ echo "<p>".$row['Description']."</p>";
 	echo $row['Longitude'];
 	echo "</p>";
 
-require_once("../inc/footer.inc.php"); 
+//require_once("../inc/footer.inc.php"); 
 ?>
 </div></div></div>
 </aside>
