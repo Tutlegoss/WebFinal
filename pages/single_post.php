@@ -25,7 +25,7 @@ a{
 
 <main class="container">
 	<div class="row">
-<div class="col-lg-6">
+<div class="col-lg-6 id="right">
 <?php
 require_once('../inc/dbconnect.php');
 $_ID="";
