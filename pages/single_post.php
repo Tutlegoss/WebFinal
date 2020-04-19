@@ -1,7 +1,7 @@
 <?php
 ob_start();
-require_once("./inc/header.inc.php");
-include("./inc/leftPanel.inc.php");
+require_once("../inc/header.inc.php");
+include("../inc/leftPanel.inc.php");
 
 function makeLink($link, $image) {
    $newlink = '<a href="' . $link . '">';
@@ -111,7 +111,7 @@ echo "<p>".$row['Message']."</p>";
 	echo "</td>";
         
 }
-require_once("./inc/footer.inc.php");
+require_once("../inc/footer.inc.php");
 ?>
 </main>
 	
