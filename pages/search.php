@@ -16,12 +16,6 @@ function Highlight($text_highlight,$text_match){
 	}
 }
 
-function assignment(){
-	
-	echo "was clicked";
-	
-}
-
 ?>
 
 
@@ -95,7 +89,7 @@ if(isset($_POST['Asc'])){
 		$order="D";
 	}
 }
-echo "order is ".$order." done";
+
 $sql="";
 
 if(isset($_POST['search'])){
