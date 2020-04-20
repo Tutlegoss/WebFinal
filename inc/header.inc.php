@@ -1,4 +1,5 @@
 <?php
+session_start();
 	if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] === "/")
 		$dir = "./";
 	else
@@ -79,7 +80,7 @@ error_reporting(E_ALL);
 						</div>
 					</li> 
 				</ul>
-				<form action="" class="form-inline  ml-auto mr-2" method="GET" >
+				<form action="" class="form-inline  ml-auto mr-2" method="post" >
 					<label for="search"></label>
 					<input class="form-control" name="search" id="search" type="search"  placeholder="Search" aria-label="Search">
 					<button class="btn btn-primary my-sm-0 btnKent" type="submit"><i class="fas fa-search"></i></button>
