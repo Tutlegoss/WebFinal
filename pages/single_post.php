@@ -32,7 +32,7 @@ a{
 		$_ID="";
 		if(isset($_POST['search'])){
 				$fil=$_POST['search'];
-				header("Location: Search.php?filter=$fil"); 
+				header("Location: search.php?filter=$fil"); 
 			}
 		if(isset($_GET['id'])){
 			$_ID=$_GET['id'];
