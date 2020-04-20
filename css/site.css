@@ -190,9 +190,10 @@ input#search {
 	color: var(--tan);
 }
 
+/* TEMPORARILY COMMENTED OUT
 .sidePanel{
 display: inline-block;
 position: absolute;
 left: 0;
 
-}
+} */

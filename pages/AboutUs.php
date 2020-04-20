@@ -20,9 +20,12 @@
 							<td>Landen Marchand</td>
 							<td>
 								<ul>
+									<li>Bootstrap Theme and Site Design</li>
 									<li>Home Page</li>
 									<li>Navigation</li>
 									<li>About Us</li>
+									<li>Browse Travel Images</li>
+									<li>Browse Posts / Users</li>
 								</ul>
 							</td>
 						</tr>
@@ -30,8 +33,10 @@
 							<td>Brandon Jacobs</td>
 							<td>
 								<ul>
-									<li>--</li>
-									<li>--</li>
+									<li>Display Single Post</li>
+									<li>Display Single Travel Image</li>
+									<li>Display Single User</li>
+									<li>Display Single Country / City</li>
 								</ul>
 							</td>
 						</tr>
@@ -39,8 +44,11 @@
 							<td>Michael Partridge</td>
 							<td>
 								<ul>
-									<li>--</li>
-									<li>--</li>
+									<li>Add To Favorites</li>
+									<li>View Favorites</li>
+									<li>Simple Search</li>
+									<li>Advanced Search</li>
+									<li>Search Results</li>
 								</ul>
 							</td>
 						</tr>
