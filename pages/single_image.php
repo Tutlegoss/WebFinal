@@ -34,7 +34,7 @@ a{
 require_once('../inc/dbconnect.php');
 if(isset($_POST['search'])){
 		$fil=$_POST['search'];
-		header("Location: Search.php?filter=$fil"); 
+		header("Location: search.php?filter=$fil"); 
 	}
 $_ID="";
 if(isset($_GET['id'])){
