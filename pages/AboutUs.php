@@ -41,8 +41,8 @@ if(isset($_POST['search'])){
 								<ul>
 									<li>Display Single Post</li>
 									<li>Display Single Travel Image</li>
-									<li>Display Single User</li>
-									<li>Display Single Country / City</li>
+									<li>Display Simple Search</li>
+									<li>Display Search Results </li>
 								</ul>
 							</td>
 						</tr>
@@ -52,9 +52,7 @@ if(isset($_POST['search'])){
 								<ul>
 									<li>Add To Favorites</li>
 									<li>View Favorites</li>
-									<li>Simple Search</li>
 									<li>Advanced Search</li>
-									<li>Search Results</li>
 								</ul>
 							</td>
 						</tr>
