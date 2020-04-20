@@ -1,8 +1,8 @@
-<?php require_once("./inc/header.inc.php"); ?>
+<?php require_once("./inc/header.inc.php"); 
 if(isset($_POST['search'])){
 	$fil=$_POST['search'];
 	header("Location: search.php?filter=$fil"); 
-}
+}?>
 	<div class="container-fluid">
 		<div class="row">
 			<?php include("./inc/leftPanel.inc.php"); ?>
