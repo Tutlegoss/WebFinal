@@ -100,15 +100,15 @@ $sql="";
 
 if(isset($_POST['search'])){
 		$fil=$_POST['search'];
-		header("Location: Search.php?filter=$fil"); 
+		header("Location: search.php?filter=$fil"); 
 	}
 if(isset($_POST['filtert'])!=""){
 	$fil=$_POST['filtert'];
-	header("Location: Search.php?filtert=$fil"); 
+	header("Location: search.php?filtert=$fil"); 
 }
 if(isset($_POST['filterm'])!=""){
 	$fil=$_POST['filterm'];
-	header("Location: Search.php?filterm=$fil"); 
+	header("Location: search.php?filterm=$fil"); 
 }
 
 $bool=0;
