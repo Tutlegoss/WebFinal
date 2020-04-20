@@ -189,3 +189,10 @@ input#search {
 #about-us table tbody {
 	color: var(--tan);
 }
+
+.sidePanel{
+display: inline-block;
+position: absolute;
+left: 0;
+
+}
