@@ -158,3 +158,29 @@
 			write2Error_Log("getTopRated(): " . $e);
 		}
 	}
+	
+/* Function for Posts.php */
+	function getPostList()
+	{
+		global $conn;
+		try {
+			if(!($sql_posts = $conn->prepare("SELECT   PostID, Title 
+			                                  FROM     travelpost 
+											  ORDER BY Title ASC"))) {
+				write2Error_Log("SELECT PostID, Title in function getPostList()");
+				return;
+			}
+			
+			$sql_posts->execute();
+			$res_posts = $sql_posts->get_result();
+			
+			while($row_posts = $res_posts->fetch_assoc()) {
+				$returned_Data[] = $row_posts;
+			}
+			$sql_posts->close();
+			return $returned_Data;			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getPostList(): " . $e);
+		}		
+	}

@@ -230,3 +230,22 @@ input#search {
 #displayImgs li a:hover {
 	color: var(--teal);
 }
+
+/* Posts.php Styles */
+/* --------------------------------------------------------*/
+#post {
+	font-family: var(--oleo);
+	color: var(--crepuscule);
+}
+
+#post h1 {
+	text-decoration: underline;
+}
+
+#post a {
+	color: var(--teal);
+}
+
+#post a:hover {
+	color: var(--navy);
+}

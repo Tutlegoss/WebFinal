@@ -5,7 +5,7 @@
 			<?php include("../inc/leftPanel.inc.php"); ?>
 			
 			<div class="col-12 col-lg-10 mt-3" id="imgFilter">
-				<h2 class="ml-3 text-center"> 
+				<h2 class="text-center"> 
 					Travel Images Filter
 				</h2>
 				<div class="row justify-content-center">

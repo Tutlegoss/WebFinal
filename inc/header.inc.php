@@ -1,9 +1,12 @@
 <?php
-session_start();
+	if(!isset($_SESSION)) 
+			session_start();
+		
 	if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] === "/")
 		$dir = "./";
 	else
 		$dir = "../";
+	
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -11,12 +14,6 @@ error_reporting(E_ALL);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Start php session so session variables are available -->
-	<?php 
-		if(!isset($_SESSION)) 
-			session_start(); 
-		ob_start();
-	?>
 	<title>Web Final Art Store</title>
 	<meta charset="utf-8">
 	<meta name="description" content="Web Final for Kent State - Stark">
