@@ -56,6 +56,10 @@ footer p {
 	border-radius: 0;
 }
 
+.btnArt:hover {
+	color: var(--tan);
+}
+
 /* Navbar Styles */
 /* --------------------------------------------------------*/
 header nav:first-child {
@@ -194,4 +198,35 @@ input#search {
 
 #about-us table tbody {
 	color: var(--tan);
+}
+
+/* Images.php Styles */
+/* --------------------------------------------------------*/
+#imgFilter {
+	font-family: var(--oleo);
+	color: var(--crepuscule);
+}
+
+#filter {
+	background-color: var(--teal);
+	height: 100px;
+	color: white;
+	font-size: 1.5rem;
+}
+
+#filterBtn {
+	font-size: 1.6rem;
+}
+
+.imgSize {
+	width: 225px;
+	height: 225px;
+}
+
+#displayImgs li a {
+	color: var(--crepuscule);
+}
+
+#displayImgs li a:hover {
+	color: var(--teal);
 }

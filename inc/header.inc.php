@@ -56,7 +56,7 @@ error_reporting(E_ALL);
 		  </div>
 		</nav>
 		<nav class="navbar navbar-expand-834" style="margin-top: -18px">
-			<a class="navbar-brand" href="/"><img src="<?php echo $dir; ?>img/Travel_Logo.png" alt="Art Pallet Logo"></a>
+			<a class="navbar-brand" href="/"><img src="<?php echo $dir; ?>img/Travel_Logo.jpg" alt="Art Pallet Logo"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
 					aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle naviation">
 				<i class="fas fa-bars"></i>
