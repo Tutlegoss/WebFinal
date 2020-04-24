@@ -15,10 +15,10 @@
 						echo '<div class="row justify-content-center">
 								  <h2>
 									  <a href="single_post.php?id=' . $p['PostID'] . '">
-										  <span>' . $p['Title'] . "</span>
+										  <span>' . $p['Title'] . '</span>
 									  </a>
 								  </h2>
-							  </div>";
+							  </div>';
 					}
 				?>
 				</div>

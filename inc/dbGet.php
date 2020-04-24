@@ -184,3 +184,29 @@
 			write2Error_Log("getPostList(): " . $e);
 		}		
 	}
+	
+/* Function for User.php */
+	function getUserList()
+	{
+		global $conn;
+		try {
+			if(!($sql_users = $conn->prepare("SELECT   FirstName, LastName, UID
+			                                  FROM     traveluserdetails 
+											  ORDER BY LastName ASC, FirstName ASC"))) {
+				write2Error_Log("SELECT FirstName, LastName, UID in function getUserList()");
+				return;
+			}
+			
+			$sql_users->execute();
+			$res_users = $sql_users->get_result();
+			
+			while($row_users = $res_users->fetch_assoc()) {
+				$returned_Data[] = $row_users;
+			}
+			$sql_users->close();
+			return $returned_Data;			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getUserList(): " . $e);
+		}		
+	}
