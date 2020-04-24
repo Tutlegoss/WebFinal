@@ -6,6 +6,8 @@
 	--teal:       #036564;
 	--crepuscule: #033649;
 	--navy:       #031634;
+	--patua:      'Patua One', monospace;
+	--oleo:       'Oleo Script', cursive;
 }
 
 /* Overall site style */
@@ -160,12 +162,16 @@ input#search {
 	
 /* index.php Styles */
 /* --------------------------------------------------------*/
+.carousel {
+	font-family: var(--oleo);
+}
+
 .carousel-height {
 	height:598px;
 }
 
 .captionBkgnd {
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.6);
 }
 
 #indexRating, #newAdditions {
@@ -189,11 +195,3 @@ input#search {
 #about-us table tbody {
 	color: var(--tan);
 }
-
-/* TEMPORARILY COMMENTED OUT
-.sidePanel{
-display: inline-block;
-position: absolute;
-left: 0;
-
-} */

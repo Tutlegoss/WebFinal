@@ -11,17 +11,26 @@ if(isset($_POST['search'])){
 				<div id="carouselSwitch" class="carousel slide carousel-fade" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="./img/art.jpg" class="d-block w-100 carousel-height" alt="...">
-							<div class="carousel-caption d-none d-md-block">
-								<h5 class="captionBkgnd">First slide label</h5>
-								<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+							<img src="./img/Earth.jpg" class="d-block w-100 carousel-height" alt="...">
+							<div class="carousel-caption d-none d-sm-block">
+								<h2>Explore the World</h2>
+								<h3>Discover exotic places anywhere, anytime.</h3>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="./img/Australia.jpg" class="d-block w-100 carousel-height" alt="...">
+							<img src="./img/Photography.jpg" class="d-block w-100 carousel-height" alt="...">
+							<div class="carousel-caption d-none d-sm-block">
+								<h2>Post Images</h2>
+								<h3>Share your wonderful images from around the world.</h3>
+							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="./img/art.jpg" class="d-block w-100 carousel-height" alt="...">
+							<img src="./img/Balloons.jpg" class="d-block w-100 carousel-height" alt="...">
+							<div class="carousel-caption d-none d-sm-block captionBkgnd">
+								<h2>Rate and Review</h2>
+								<h3>Tell the Internet about your experiences.</h3>
+								<h4>Balloon Fest: Best travel destination 2017</h4>
+							</div>
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselSwitch" role="button" data-slide="prev">
