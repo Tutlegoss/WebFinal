@@ -28,6 +28,7 @@ error_reporting(E_ALL);
 	<script src="<?php echo $dir; ?>inc/bootstrap-4.4.1-dist/js/jquery-3.4.1.min.js"></script>
 	<script src="<?php echo $dir; ?>inc/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="<?php echo $dir; ?>css/site.css">
+	<link rel="stylesheet" href="<?php echo $dir; ?>css/captions.css">
 	<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet"> 
 
@@ -74,16 +75,16 @@ error_reporting(E_ALL);
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle nav-item btnArt" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse</a>
 						<div class="dropdown-menu navDrop" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="#">Posts</a>
-							<a class="dropdown-item" href="#">Images</a>
-							<a class="dropdown-item" href="#">Users</a> 
+							<a class="dropdown-item" href="/pages/Posts.php">Posts</a>
+							<a class="dropdown-item" href="/pages/Images.php">Images</a>
+							<a class="dropdown-item" href="/pages/Users/php">Users</a> 
 						</div>
 					</li> 
 				</ul>
-				<form action="" class="form-inline  ml-auto mr-2" method="post" >
+				<form action="" class="form-inline ml-auto mr-2" method="post" >
 					<label for="search"></label>
 					<input class="form-control" name="search" id="search" type="search"  placeholder="Search" aria-label="Search">
-					<button class="btn btn-primary my-sm-0 btnKent" type="submit"><i class="fas fa-search"></i></button>
+					<button class="btn btnArt" type="submit"><i class="fas fa-search"></i></button>
 				</form>
 			</div>  
 		</nav>
