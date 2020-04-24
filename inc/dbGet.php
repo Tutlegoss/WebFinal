@@ -9,7 +9,8 @@
 		$content .= $error . "\n";
 		file_put_contents($file, $content);
 	}
-	
+
+/* Functions for leftPanel.inc.php */	
 	function getContinentNames() {
 		global $conn;
 		try {
@@ -26,7 +27,7 @@
 			while($row_continents = $res_continents->fetch_assoc()) {
 				$returned_Data[] = $row_continents['ContinentName'];
 			}
-			
+			$sql_continents->close();
 			return $returned_Data;
 		}
 		catch(Exception $e) {
@@ -37,7 +38,7 @@
 	function getCountryNames() {
 		global $conn;
 		try {
-			if(!($sql_countries = $conn->prepare("SELECT   CountryName 
+			if(!($sql_countries = $conn->prepare("SELECT   CountryName, ISO 
 												  FROM     travelimagedetails JOIN geocountries
 												  ON       CountryCodeISO = ISO
 												  GROUP BY CountryCodeISO
@@ -50,9 +51,9 @@
 			$res_countries = $sql_countries->get_result();
 
 			while($row_countries = $res_countries->fetch_assoc()) {
-				$returned_Data[] = $row_countries['CountryName'];
+				$returned_Data[] = $row_countries;
 			}
-			
+			$sql_countries->close();
 			return $returned_Data;
 		}
 		catch(Exception $e) {
@@ -63,12 +64,12 @@
 	function getCityNames() {
 		global $conn;
 		try {
-			if(!($sql_cities = $conn->prepare("SELECT   AsciiName 
+			if(!($sql_cities = $conn->prepare("SELECT   AsciiName, CityCode
 											   FROM     travelimagedetails JOIN geocities
 											   ON       CityCode = GeoNameID
 											   GROUP BY CityCode
 											   ORDER BY AsciiName"))) {
-				write2Error_Log("SELECT AsciiName FROM geocities");
+				write2Error_Log("SELECT AsciiName in function getCityNames()");
 				return;
 			}
 			
@@ -76,16 +77,17 @@
 			$res_cities = $sql_cities->get_result();
 			
 			while($row_cities = $res_cities->fetch_assoc()) {
-				$returned_Data[] = $row_cities['AsciiName'];
+				$returned_Data[] = $row_cities;
 			}
-			
+			$sql_cities->close();
 			return $returned_Data;
 		}
 		catch(Exception $e) {
 			write2Error_Log("getCityNames(): " . $e);
 		}
 	}
-	
+
+/* Functions for /index.php */	
 	function getTopRated()
 	{
 		global $conn;
@@ -103,7 +105,7 @@
 
 			for($i = 0; $i < 10; ++$i) 
 				$returned_Data[] = $res_rated->fetch_assoc();
-			
+			$sql_rated->close();
 			return $returned_Data;			
 		}
 		catch (Exception $e) {
@@ -125,7 +127,7 @@
 			
 			$sql_img->execute();
 			$res_img = $sql_img->get_result();
-
+			$sql_img->close();
 			return $res_img->fetch_assoc();
 		}
 		catch (Exception $e) {
@@ -149,6 +151,7 @@
 
 			for($i = 0; $i < 10; ++$i) 
 				$returned_Data[] = $res_new->fetch_assoc();
+			$sql_new->close();
 			return $returned_Data;			
 		}
 		catch (Exception $e) {
