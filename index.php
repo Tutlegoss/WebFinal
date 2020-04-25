@@ -75,23 +75,19 @@ if(isset($_POST['search'])){
 								<th colspan="2">New Additions</td>
 							</tr>
 							<?php 
-								$newImages = getNewAdditions(); 
+								$newPost = getNewAdditions(); 
 								
-								for($i = 0, $j = 1; $i < 10; $i += 2, $j += 2) { 
-									$imageNameLeft  = getImageName($newImages[$i]['ImageID']);
-									$imageNameRight = getImageName($newImages[$j]['ImageID']);
-									echo 	"<tr>
-												<td class='text-center'>
-													$imageNameLeft[Title]
-													<img src='./img/square-medium/$imageNameLeft[Path]' class='d-block m-auto'>
-													<span style='color: #E8DDCB'>_</span>
+								foreach($newPost as $p) {
+									echo 	'<tr>
+												<td class="text-center">
+													<a href="single_post.php?id=' . $p['PostID'] . '">
+														<span>' . $p['Title'] . '</span>
+													</a>
 												</td>
-												<td class='text-center'>
-													$imageNameRight[Title]
-													<img src='./img/square-medium/$imageNameRight[Path]' class='d-block m-auto'>
-													<span style='color: #E8DDCB'>_</span>
-												</td>
-											 </tr>"; 
+												<td class="">'
+													. explode(' ',trim($p['PostTime']))[0] .
+												'</td>
+											 </tr>'; 
 								}				
 							?> 					
 						</table>	

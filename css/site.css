@@ -60,6 +60,14 @@ footer p {
 	color: var(--tan);
 }
 
+a {
+	color: var(--teal);
+}
+
+a:hover {
+	color: var(--navy);
+}
+
 /* Navbar Styles */
 /* --------------------------------------------------------*/
 header nav:first-child {
@@ -223,14 +231,6 @@ input#search {
 	height: 225px;
 }
 
-#displayImgs li a {
-	color: var(--crepuscule);
-}
-
-#displayImgs li a:hover {
-	color: var(--teal);
-}
-
 /* Posts.php Styles */
 /* --------------------------------------------------------*/
 #post {
@@ -240,12 +240,4 @@ input#search {
 
 #post h1 {
 	text-decoration: underline;
-}
-
-#post a {
-	color: var(--teal);
-}
-
-#post a:hover {
-	color: var(--navy);
 }
