@@ -25,7 +25,7 @@
 			$res_continents = $sql_continents->get_result();
 			
 			while($row_continents = $res_continents->fetch_assoc()) {
-				$returned_Data[] = $row_continents['ContinentName'];
+				$returned_Data[] = $row_continents;
 			}
 			$sql_continents->close();
 			return $returned_Data;
