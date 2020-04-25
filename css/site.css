@@ -171,6 +171,14 @@ input#search {
 #left ul li a:hover {
 	color: var(--tan);
 }
+
+@media (max-width: 991.98px)
+{
+	#left {
+		height: 450px;
+		overflow: scroll;
+	}
+}
 	
 /* index.php Styles */
 /* --------------------------------------------------------*/
