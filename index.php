@@ -44,7 +44,7 @@ if(isset($_POST['search'])){
 					</a>
 				</div>
 				<div class="row mt-3 mb-3">
-					<div class="col-6 mt-3">		
+					<div class="col-12 col-md-6 mt-3">		
 						<table class="table mb-0" id="indexRating">
 							<tr class="text-center">
 								<th colspan="2">Top 10 Images</td>
@@ -71,7 +71,7 @@ if(isset($_POST['search'])){
 							?> 					
 						</table>	
 					</div>
-					<div class="col-6 mt-3">		
+					<div class="col-12 col-md-6 mt-3">		
 						<table class="table mb-0" id="newAdditions">
 							<tr class="text-center">
 								<th colspan="2">New Additions</td>
