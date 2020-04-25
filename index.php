@@ -80,7 +80,7 @@ if(isset($_POST['search'])){
 								foreach($newPost as $p) {
 									echo 	'<tr>
 												<td class="text-center">
-													<a href="single_post.php?id=' . $p['PostID'] . '">
+													<a href="./pages/single_post.php?id=' . $p['PostID'] . '">
 														<span>' . $p['Title'] . '</span>
 													</a>
 												</td>
