@@ -267,12 +267,16 @@ input#search {
 /* Single_CountryCity.php */
 #countryCity {
 	text-align: center;
+}
+
+#countryCity h2{
 	color: var(--teal);
+	font-family: var(--libre);
 }
 
 #countryCity img {
 	border: 2px solid var(--navy);
-	width: 500px; 
+	 width: 600px;
 	height: 500px;
 }
 
@@ -280,4 +284,15 @@ input#search {
 	background-color: var(--crepuscule);
 	color: var(--brown);
 	font-size: 1.3rem;
+	text-align: left;
+}
+
+#countryDesc {
+	border: 2px solid var(--navy);
+	background-color: rgba(3,22,52,0.80);
+	color: var(--tan);
+	font-family: var(--libre);
+	font-size: 1.3rem;
+	text-align: justify;
+	padding: 15px;
 }

@@ -217,7 +217,7 @@
 	{
 		global $conn;
 		try {
-			if(!($sql_users = $conn->prepare("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName
+			if(!($sql_city = $conn->prepare("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName
 											  FROM   geocities JOIN geocountries
 											  ON     ISO = CountryCodeISO
 											  WHERE   geocities.GeoNameID = ?;"))) {
@@ -225,39 +225,37 @@
 				return;
 			}
 			
-			$sql_users->bind_param("i",$ID);
-			$sql_users->execute();
-			$res_users = $sql_users->get_result();
+			$sql_city->bind_param("i",$ID);
+			$sql_city->execute();
+			$res_city = $sql_city->get_result();
 
-			$sql_users->close();
-			return $res_users->fetch_assoc();			
+			$sql_city->close();
+			return $res_city->fetch_assoc();			
 		}
 		catch (Exception $e) {
 			write2Error_Log("getCityInfo(): " . $e);
 		}		
 	}
 	
-	function getCountryInfo()
+	function getCountryInfo($ID)
 	{
 		global $conn;
 		try {
-			if(!($sql_users = $conn->prepare("SELECT   FirstName, LastName, UID
-			                                  FROM     traveluserdetails 
-											  ORDER BY LastName ASC, FirstName ASC"))) {
-				write2Error_Log("SELECT FirstName, LastName, UID in function getUserList()");
+			if(!($sql_country = $conn->prepare("SELECT CountryName, Capital, Area, Population, CurrencyCode, CountryDescription
+			                                    FROM   geocountries
+											    WHERE  ISO = ?;"))) {
+				write2Error_Log("SELECT CountryName, Capital, Area, Population, CurrencyCode, CountryDescription in function getCountryInfo()");
 				return;
 			}
 			
-			$sql_users->execute();
-			$res_users = $sql_users->get_result();
-			
-			while($row_users = $res_users->fetch_assoc()) {
-				$returned_Data[] = $row_users;
-			}
-			$sql_users->close();
-			return $returned_Data;			
+			$sql_country->bind_param("s",$ID);
+			$sql_country->execute();
+			$res_country = $sql_country->get_result();
+
+			$sql_country->close();
+			return $res_country->fetch_assoc();			
 		}
 		catch (Exception $e) {
-			write2Error_Log("getUserList(): " . $e);
+			write2Error_Log("getCountryInfo(): " . $e);
 		}		
 	}
