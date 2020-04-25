@@ -217,11 +217,11 @@
 	{
 		global $conn;
 		try {
-			if(!($sql_city = $conn->prepare("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName
-											  FROM   geocities JOIN geocountries
-											  ON     ISO = CountryCodeISO
-											  WHERE   geocities.GeoNameID = ?;"))) {
-				write2Error_Log("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName in function getCityInfo()");
+			if(!($sql_city = $conn->prepare("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName, Latitude, Longitude
+											 FROM   geocities JOIN geocountries
+											 ON     ISO = CountryCodeISO
+											 WHERE  geocities.GeoNameID = ?;"))) {
+				write2Error_Log("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName, Latitude, Longitude in function getCityInfo()");
 				return;
 			}
 			

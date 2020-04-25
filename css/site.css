@@ -288,11 +288,15 @@ input#search {
 }
 
 #countryDesc {
-	border: 2px solid var(--navy);
-	background-color: rgba(3,22,52,0.80);
-	color: var(--tan);
+	color: var(--crepuscule);
 	font-family: var(--libre);
 	font-size: 1.3rem;
 	text-align: justify;
 	padding: 15px;
+}
+
+#map {
+	width: 600px;
+	height: 500px;
+	background-color: grey;
 }
