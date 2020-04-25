@@ -66,14 +66,15 @@
 				
 				success: function(data)
 				{
-					$('#imgFilter').append('<ul class="caption-style-2 mt-5 mb-3" id="displayImgs"> </ul>');
+					$('#imgFilter').append('<ul class="mt-5 mb-3 list-inline text-center" id="displayImgs"> </ul>');
 					for(var i = 0; i < data.length; ++i) {
-						$('#displayImgs').append('<li class="mb-2 ml-5">' +
+						$('#displayImgs').append('<li class="mb-2 list-inline-item px-2">' +
 						                         '<a href="single_image.php?id=' + data[i].ImageID + '" class="img-responsive">' +
 												 '<img class="imgSize" src="../img/square-medium/' + data[i].Path + '" alt="' + data[i].Title + '">' + 
 												 '<h6 class="text-center">' + data[i].Title + '</h6>' +
 												 '</a></li>');
 					}
+					$('#imgFilter').append('</ul>');
 
 				}
 			});
