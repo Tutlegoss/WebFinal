@@ -1,4 +1,7 @@
-<?php require_once("../inc/header.inc.php"); ?>
+<?php require_once("../inc/header.inc.php"); 
+	$Lat = 0;
+	$Lon = 0;
+?>
 
 	<div class="container-fluid">
 		<div class="row">
@@ -11,9 +14,7 @@
 						$fileName = explode(' ',$data['AsciiName'])[0];
 						$Lon = $data['Longitude'];
 						$Lat = $data['Latitude'];
-						echo $Lon;
-						echo $Lat;
-						
+
 						echo "<h2>$data[AsciiName]</h2>";
 						echo '<div class=" mt-3 mx-auto" id="map"></div>';
 						/*echo '<img src="../img/Maps/'.$fileName.'.PNG" alt="'.$data['AsciiName'].'">';*/
