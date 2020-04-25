@@ -77,7 +77,7 @@ error_reporting(E_ALL);
 						<div class="dropdown-menu navDrop" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="/pages/Posts.php">Posts</a>
 							<a class="dropdown-item" href="/pages/Images.php">Images</a>
-							<a class="dropdown-item" href="/pages/Users/php">Users</a> 
+							<a class="dropdown-item" href="/pages/Users.php">Users</a> 
 						</div>
 					</li> 
 				</ul>
