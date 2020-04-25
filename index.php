@@ -11,6 +11,7 @@ if(isset($_POST['search'])){
 				<div id="carouselSwitch" class="carousel slide carousel-fade" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
+							<!-- https://earthchallenge2020.earthday.org/ -->
 							<img src="./img/Earth.jpg" class="d-block w-100 carousel-height" alt="...">
 							<div class="carousel-caption d-none d-sm-block">
 								<h2>Explore the World</h2>
@@ -18,6 +19,7 @@ if(isset($_POST['search'])){
 							</div>
 						</div>
 						<div class="carousel-item">
+							<!-- http://weknowyourdreams.com/photography.html -->
 							<img src="./img/Photography.jpg" class="d-block w-100 carousel-height" alt="...">
 							<div class="carousel-caption d-none d-sm-block">
 								<h2>Post Images</h2>
@@ -25,6 +27,7 @@ if(isset($_POST['search'])){
 							</div>
 						</div>
 						<div class="carousel-item">
+							<!-- https://www.dailysabah.com/turkey/2019/07/02/cappadocia-awaits-tourists-for-magical-hot-air-balloon-fest#gallery -->
 							<img src="./img/Balloons.jpg" class="d-block w-100 carousel-height" alt="...">
 							<div class="carousel-caption d-none d-sm-block captionBkgnd">
 								<h2>Rate and Review</h2>
@@ -46,7 +49,6 @@ if(isset($_POST['search'])){
 							<tr class="text-center">
 								<th colspan="2">Top 10 Images</td>
 							</tr>
-
 							<?php 
 								$topImages = getTopRated(); 
 								
@@ -89,7 +91,7 @@ if(isset($_POST['search'])){
 												'</td>
 											 </tr>'; 
 								}				
-							?> 					
+							?> 						
 						</table>	
 					</div>
 				</div>

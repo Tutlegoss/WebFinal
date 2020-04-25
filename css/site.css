@@ -7,7 +7,7 @@
 	--crepuscule: #033649;
 	--navy:       #031634;
 	--patua:      'Patua One', monospace;
-	--oleo:       'Oleo Script', cursive;
+	--libre:      'Libre Baskerville', serif;
 }
 
 /* Overall site style */
@@ -175,7 +175,7 @@ input#search {
 /* index.php Styles */
 /* --------------------------------------------------------*/
 .carousel {
-	font-family: var(--oleo);
+	font-family: var(--libre);
 }
 
 .carousel-height {
@@ -211,7 +211,7 @@ input#search {
 /* Images.php Styles */
 /* --------------------------------------------------------*/
 #imgFilter {
-	font-family: var(--oleo);
+	font-family: var(--libre);
 	color: var(--crepuscule);
 }
 
@@ -234,10 +234,16 @@ input#search {
 /* Posts.php Styles */
 /* --------------------------------------------------------*/
 #post {
-	font-family: var(--oleo);
+	font-family: var(--libre);
 	color: var(--crepuscule);
 }
 
 #post h1 {
 	text-decoration: underline;
 }
+
+#post #msg {
+	font-family: var(--patua);
+	font-size: 1.1rem;
+	color: var(--navy);
+}	

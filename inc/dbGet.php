@@ -165,10 +165,10 @@
 	{
 		global $conn;
 		try {
-			if(!($sql_posts = $conn->prepare("SELECT   PostID, Title 
+			if(!($sql_posts = $conn->prepare("SELECT   PostID, Title, Message, PostTime 
 			                                  FROM     travelpost 
 											  ORDER BY Title ASC"))) {
-				write2Error_Log("SELECT PostID, Title in function getPostList()");
+				write2Error_Log("SELECT PostID, Title, Message, PostTime in function getPostList()");
 				return;
 			}
 			

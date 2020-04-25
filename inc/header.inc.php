@@ -30,7 +30,7 @@ error_reporting(E_ALL);
 	<link rel="stylesheet" href="<?php echo $dir; ?>css/site.css">
 	<link rel="stylesheet" href="<?php echo $dir; ?>css/captions.css">
 	<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">  
 
 </head>
 
