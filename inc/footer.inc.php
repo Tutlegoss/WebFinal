@@ -8,7 +8,7 @@
 	<footer class="container-fluid rounded-0 text-center">
 		<div class="row">
 			<div class="col">
-				<p class="my-auto">This is obviously the footer</p>
+				<p class="my-auto">Created by: Landen Marchand, Brandon Jacobs, Michael Partridge - KSU-Stark 2020</p>
 			</div>
 		</div>
 	</footer>
