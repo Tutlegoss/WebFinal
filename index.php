@@ -57,18 +57,22 @@ if(isset($_POST['search'])){
 									$imageNameRight = getImageName($topImages[$j]['ImageID']);
 									echo 	"<tr>
 												<td class='text-center'>
-													$imageNameLeft[Title]
-													<img src='./img/square-medium/$imageNameLeft[Path]' class='d-block m-auto'>
+												    <a href='./pages/single_image.php?id=".$topImages[$i]['ImageID']."'>
+													    $imageNameLeft[Title]
+													    <img src='./img/square-medium/$imageNameLeft[Path]' class='d-block m-auto'>
+													</a>
 													Rating: " . round($topImages[$i]['AVG(Rating)'],1) .
 											"	</td>
 												<td class='text-center'>
-													$imageNameRight[Title]
-													<img src='./img/square-medium/$imageNameRight[Path]' class='d-block m-auto'>
+													<a href='./pages/single_image.php?id=".$topImages[$j]['ImageID']."'>
+													    $imageNameRight[Title]
+													    <img src='./img/square-medium/$imageNameRight[Path]' class='d-block m-auto'>
+													</a>
 													Rating: " . round($topImages[$j]['AVG(Rating)'],1) .
 											"	</td>
 											 </tr>"; 
 								}				
-							?> 					
+							?> 			 					
 						</table>	
 					</div>
 					<div class="col-12 col-md-6 mt-3">		
