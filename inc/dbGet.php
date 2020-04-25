@@ -14,7 +14,7 @@
 	function getContinentNames() {
 		global $conn;
 		try {
-			if(!($sql_continents = $conn->prepare("SELECT   ContinentName 
+			if(!($sql_continents = $conn->prepare("SELECT   ContinentName, ContinentCode 
 												   FROM     geocontinents
 												   ORDER BY ContinentName"))) {
 				write2Error_Log("SELECT ContinentName in function getContinentNames()");
