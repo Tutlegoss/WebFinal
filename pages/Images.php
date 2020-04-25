@@ -10,6 +10,17 @@
 				</h2>
 				<div class="row justify-content-center">
 					<form class="form-inline text-center" id="filter" action="javascript:void(0);" method="GET">
+					
+						<div class="col-4">
+							<label for="city">Continent: </label>
+							<select class="form-control" id="continent" name="continent">
+								<option selected disabled value="">Continent</option>
+								<?php foreach ($continentNames as $cn) { ?>
+									<option value="<?php echo $cn['ContinentCode']; ?>"> <?php echo $cn['ContinentName']; ?> </option>
+								<?php } ?>
+							</select>
+						</div>		
+						
 						<div class="col-4">
 							<label for="country">Country: </label>
 							<select class="form-control justify-content-center" id="country" name="country">
@@ -19,18 +30,11 @@
 								<?php } ?>
 							</select>
 						</div>
-						<div class="col-4">
-							<label for="city">City: </label>
-							<select class="form-control" id="city" name="city">
-								<option selected disabled value="">City</option>
-								<?php foreach ($cityNames as $cn) { ?>
-									<option value="<?php echo $cn['CityCode']; ?>"> <?php echo $cn['AsciiName']; ?> </option>
-								<?php } ?>
-							</select>
-						</div>
+
 						<div class="col-4 text-center">
 							<input class="btn btnArt" id="filterBtn" type="submit" value="Filter">
 						</div>
+						
 					</form>
 				</div>
 			</div>
@@ -39,17 +43,17 @@
 	
 	<script>
 		$("#filterBtn").click(function() {
-			var URL     = "../inc/ImageFilter.php";
-			var country = $('#country').val();
-			var city    = $('#city').val();
-			var param   = "country=" + country + "&city=" + city;
+			var URL       = "../inc/ImageFilter.php";
+			var country   = $('#country').val();
+			var continent = $('#continent').val();
+			var param     = "country=" + country + "&continent=" + continent;
 			$('#empty').remove();
 			$('#displayImgs').remove();
 			$('#country').val('');
-			$('#city').val('');
+			$('#continent').val('');
 			console.log(param);
-			if(country == null && city == null) {
-				$('#imgFilter').append('<h3 class="mt-3 text-center" id="empty">' + "Please select a value for Country and/or City" + "</h3>");
+			if(country == null && continent == null) {
+				$('#imgFilter').append('<h3 class="mt-3 text-center" id="empty">' + "Please select a value for Continent and/or Country" + "</h3>");
 				return;
 			}
 				
@@ -64,10 +68,10 @@
 				{
 					$('#imgFilter').append('<ul class="caption-style-2 mt-5 mb-3" id="displayImgs"> </ul>');
 					for(var i = 0; i < data.length; ++i) {
-						$('#displayImgs').append('<li class="mb-2 ml-1">' +
-						                         '<a href="../img/square-medium/' + data[i].Path + '" class="img-responsive">' +
+						$('#displayImgs').append('<li class="mb-2 ml-5">' +
+						                         '<a href="single_image.php?id=' + data[i].ImageID + '" class="img-responsive">' +
 												 '<img class="imgSize" src="../img/square-medium/' + data[i].Path + '" alt="' + data[i].Title + '">' + 
-												 '<h5 class="text-center">' + data[i].Title + '</h5>' +
+												 '<h6 class="text-center">' + data[i].Title + '</h6>' +
 												 '</a></li>');
 					}
 

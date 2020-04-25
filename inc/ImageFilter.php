@@ -5,29 +5,35 @@
 	{
 		global $conn;
 		try {	
-			$sql = "SELECT   travelimagedetails.ImageID as ImageID, Title, Path 
-                    FROM     travelimagedetails JOIN travelimage
-                    WHERE "; 
-			if($_GET['country'] != 'null' && $_GET['city'] == 'null') {
-				if(!($sql_images = $conn->prepare($sql . "CountryCodeISO = ? AND travelimagedetails.ImageID = travelimage.ImageID"))) {
+			if($_GET['country'] != 'null' && $_GET['continent'] == 'null') {
+				if(!($sql_images = $conn->prepare("SELECT   Title, Path, travelimagedetails.ImageID as ImageID 
+												   FROM     travelimagedetails JOIN travelimage
+                                                   WHERE CountryCodeISO = ? AND travelimagedetails.ImageID = travelimage.ImageID"))) {
 					echo "Prepare failed: (" . $conn->errno . ")" . $conn->error;
 					return;
 				}
 				$sql_images->bind_param("s", $_GET['country']);
 			}
-			else if($_GET['city'] != 'null' && $_GET['country'] == 'null') {
-				if(!($sql_images = $conn->prepare($sql . "CityCode = ? AND travelimagedetails.ImageID = travelimage.ImageID"))) {
+			else if($_GET['continent'] != 'null' && $_GET['country'] == 'null') {
+				if(!($sql_images = $conn->prepare("SELECT Title, Path, travelimagedetails.ImageID as ImageID
+				                                   FROM   (geocountries JOIN travelimagedetails) JOIN travelimage
+												   WHERE  Continent = ?
+												     AND  ISO = CountryCodeISO
+													 AND travelimagedetails.ImageID = travelimage.ImageID"))) {
 					echo "Prepare failed: (" . $conn->errno . ")" . $conn->error;
 					return;
 				}
-				$sql_images->bind_param("i", $_GET['city']);
+				$sql_images->bind_param("s", $_GET['continent']);
 			}
 			else {
-				if(!($sql_images = $conn->prepare($sql . "CityCode = ? AND CountryCodeISO = ? AND travelimagedetails.ImageID = travelimage.ImageID"))) {
+				if(!($sql_images = $conn->prepare("SELECT Title, Path, travelimagedetails.ImageID as ImageID
+				                                   FROM   (geocountries JOIN travelimagedetails) JOIN travelimage
+												   WHERE  Continent = ? AND ISO = ?
+													 AND ISO = CountryCodeISO AND travelimagedetails.ImageID = travelimage.ImageID"))) {
 					echo "Prepare failed: (" . $conn->errno . ")" . $conn->error;
 					return;
 				}
-				$sql_images->bind_param("is",  $_GET['city'], $_GET['country'],);
+				$sql_images->bind_param("ss",  $_GET['continent'], $_GET['country'],);
 			}
 
 			$sql_images->execute();

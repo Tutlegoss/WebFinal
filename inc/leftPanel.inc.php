@@ -11,7 +11,7 @@
 							$continentNames = getContinentNames();
 							foreach($continentNames as $cn)
 								echo "<li class='list-group-item'>
-										  <a href=#> $cn </a>
+										  <a href=#> $cn[ContinentName] </a>
 									  </li>";
 						?>					
 					</ul>
