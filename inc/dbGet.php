@@ -87,7 +87,7 @@
 		}
 	}
 
-/* Functions for /index.php */	
+/* Functions for index.php */	
 	function getTopRated()
 	{
 		global $conn;
@@ -188,6 +188,56 @@
 	
 /* Function for User.php */
 	function getUserList()
+	{
+		global $conn;
+		try {
+			if(!($sql_users = $conn->prepare("SELECT   FirstName, LastName, UID
+			                                  FROM     traveluserdetails 
+											  ORDER BY LastName ASC, FirstName ASC"))) {
+				write2Error_Log("SELECT FirstName, LastName, UID in function getUserList()");
+				return;
+			}
+			
+			$sql_users->execute();
+			$res_users = $sql_users->get_result();
+			
+			while($row_users = $res_users->fetch_assoc()) {
+				$returned_Data[] = $row_users;
+			}
+			$sql_users->close();
+			return $returned_Data;			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getUserList(): " . $e);
+		}		
+	}
+	
+/* Functions for Single_CountryCity.php */
+	function getCityInfo($ID)
+	{
+		global $conn;
+		try {
+			if(!($sql_users = $conn->prepare("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName
+											  FROM   geocities JOIN geocountries
+											  ON     ISO = CountryCodeISO
+											  WHERE   geocities.GeoNameID = ?;"))) {
+				write2Error_Log("SELECT AsciiName, geocities.Population as Population, Elevation, CountryName in function getCityInfo()");
+				return;
+			}
+			
+			$sql_users->bind_param("i",$ID);
+			$sql_users->execute();
+			$res_users = $sql_users->get_result();
+
+			$sql_users->close();
+			return $res_users->fetch_assoc();			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getCityInfo(): " . $e);
+		}		
+	}
+	
+	function getCountryInfo()
 	{
 		global $conn;
 		try {

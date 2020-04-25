@@ -263,3 +263,21 @@ input#search {
 	font-size: 1.1rem;
 	color: var(--navy);
 }	
+
+/* Single_CountryCity.php */
+#countryCity {
+	text-align: center;
+	color: var(--teal);
+}
+
+#countryCity img {
+	border: 2px solid var(--navy);
+	width: 500px; 
+	height: 500px;
+}
+
+#countryCity table {
+	background-color: var(--crepuscule);
+	color: var(--brown);
+	font-size: 1.3rem;
+}
