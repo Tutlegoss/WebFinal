@@ -11,6 +11,8 @@
 						$fileName = explode(' ',$data['AsciiName'])[0];
 						$Lon = $data['Longitude'];
 						$Lat = $data['Latitude'];
+						echo $Lon;
+						echo $Lat;
 						
 						echo "<h2>$data[AsciiName]</h2>";
 						echo '<div class=" mt-3 mx-auto" id="map"></div>';
