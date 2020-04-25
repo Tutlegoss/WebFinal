@@ -231,7 +231,7 @@ input#search {
 }
 
 #filterBtn {
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 }
 
 .imgSize {
@@ -240,6 +240,10 @@ input#search {
 }
 
 #displayImgs h6 {
+	font-size: 0.9rem;
+}
+
+#cb1 ~ span {
 	font-size: 0.9rem;
 }
 

@@ -4,8 +4,17 @@
 	function filter()
 	{
 		global $conn;
-		try {	
-			if($_GET['country'] != 'null' && $_GET['continent'] == 'null') {
+		try {
+			if($_GET['country'] == 'ALL' && $_GET['continent'] == 'ALL') {
+				if(!($sql_images = $conn->prepare("SELECT   Title, Path, travelimagedetails.ImageID as ImageID 
+												   FROM     travelimagedetails JOIN travelimage
+                                                   WHERE    travelimagedetails.ImageID = travelimage.ImageID
+												   ORDER BY Title ASC"))) {
+					echo "Prepare failed: (" . $conn->errno . ")" . $conn->error;
+					return;
+				}
+			}
+			else if($_GET['country'] != 'null' && $_GET['continent'] == 'null') {
 				if(!($sql_images = $conn->prepare("SELECT   Title, Path, travelimagedetails.ImageID as ImageID 
 												   FROM     travelimagedetails JOIN travelimage
                                                    WHERE CountryCodeISO = ? AND travelimagedetails.ImageID = travelimage.ImageID"))) {

@@ -16,7 +16,7 @@
 							<select class="form-control" id="continent" name="continent">
 								<option selected disabled value="">Continent</option>
 								<?php foreach ($continentNames as $cn) { ?>
-									<option value="<?php echo $cn['ContinentCode']; ?>"> <?php echo $cn['ContinentName']; ?> </option>
+									<option id="G" value="<?php echo $cn['ContinentCode']; ?>"> <?php echo $cn['ContinentName']; ?> </option>
 								<?php } ?>
 							</select>
 						</div>		
@@ -32,7 +32,8 @@
 						</div>
 
 						<div class="col-4 text-center">
-							<input class="btn btnArt" id="filterBtn" type="submit" value="Filter">
+							<input class="btn btnArt filterBtn" id="btn1" type="submit" value="Filter"><br>
+							<input type="checkbox" class="" id="cb1" name="No Filter" value="No Filter"><span class="ml-1">No Filter</span>
 						</div>
 						
 					</form>
@@ -42,18 +43,50 @@
 	</div>
 	
 	<script>
-		$("#filterBtn").click(function() {
+		var isChecked = false;
+		$('input[type="checkbox"]').click(function() {
+			if($(this).prop("checked") == true) {
+				$("#btn1").val("No Filter");
+				isChecked = true;
+			}
+			else {
+				$("#btn1").val("Filter");
+				isChecked = false;
+			}
+		});
+	
+		$("#continent").change(function() {
+			if($("#continent option:selected").text() != "")
+				$("#btn1").removeAttr("disabled");
+			
+		});
+		$("#city").change(function() {
+			if($("#city option:selected").text() != "")
+				$("#btn1").removeAttr("disabled");
+			
+		});
+		
+		$("#btn1").click(function() {
+			var country = "";
+			var continent = "";
 			var URL       = "../inc/ImageFilter.php";
-			var country   = $('#country').val();
-			var continent = $('#continent').val();
+			if(isChecked) {
+				country = "ALL";
+				continent = "ALL"	
+			}
+			else {
+				country   = $('#country').val();
+				continent = $('#continent').val();
+			}
 			var param     = "country=" + country + "&continent=" + continent;
 			$('#empty').remove();
 			$('#displayImgs').remove();
 			$('#country').val('');
 			$('#continent').val('');
-			console.log(param);
+			
+
 			if(country == null && continent == null) {
-				$('#imgFilter').append('<h3 class="mt-3 text-center" id="empty">' + "Please select a value for Continent and/or Country" + "</h3>");
+				$('#imgFilter').append('<h3 class="mt-3 text-center" id="empty">' + "Please select a value for Continent and/or Country OR choose No Filter checkbox" + "</h3>");
 				return;
 			}
 				
