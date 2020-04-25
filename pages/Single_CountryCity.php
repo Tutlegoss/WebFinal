@@ -95,7 +95,7 @@
 		// Initialize and add the map
 		function initMap() {
 			// The location of Uluru
-			var uluru = {lat: <?php $Lat ?>, lng: <?php $Lon ?>};
+			var uluru = {lat: <?php echo $Lat; ?>, lng: <?php echo $Lon; ?>};
 			// The map, centered at Uluru
 			var map = new google.maps.Map(
 			  document.getElementById('map'), {zoom: 4, center: uluru});
