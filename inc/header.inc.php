@@ -1,7 +1,10 @@
 <?php
 	if(!isset($_SESSION)) 
 			session_start();
-		
+	if(isset($_POST['search'])){
+		$fil=$_POST['search'];
+		header("Location: search.php?filter=$fil");
+	}	
 	if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] === "/")
 		$dir = "./";
 	else
