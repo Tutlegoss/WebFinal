@@ -14,7 +14,7 @@ if(isset($_POST['search'])){
 				<h3 class="mt-3 ml-3 text-center"> 
 					Hypothetical Website for CS 44106 - WP2 at Kent State University taught by Dr A. Guercio
 				</h3>
-				<table class="table table-striped mt-5" id="about-us">
+				<table class="table table-striped mt-3" id="about-us">
 					<thead>
 						<tr>
 							<th scope="col">Name</th>
@@ -32,6 +32,7 @@ if(isset($_POST['search'])){
 									<li>About Us</li>
 									<li>Browse Travel Images</li>
 									<li>Browse Posts / Users</li>
+									<li>Display Single Country/City</li>
 								</ul>
 							</td>
 						</tr>
@@ -53,6 +54,7 @@ if(isset($_POST['search'])){
 									<li>Add To Favorites</li>
 									<li>View Favorites</li>
 									<li>Advanced Search</li>
+									<li>Display Single User</li>
 								</ul>
 							</td>
 						</tr>
