@@ -27,7 +27,7 @@
 							$countryNames = getCountryNames();
 							foreach($countryNames as $cn)
 								echo "<li class='list-group-item'>
-										  <a href=#> $cn[CountryName] </a>
+										  <a href='".$dir."pages/Single_CountryCity.php?country=$cn[ISO]'> $cn[CountryName] </a>
 									  </li>";
 						?>					
 					</ul>
@@ -43,7 +43,7 @@
 							$cityNames = getCityNames();
 							foreach($cityNames as $cn)
 								echo "<li class='list-group-item'>
-										  <a href='#'> $cn[AsciiName] </a>
+										  <a href='".$dir."pages/Single_CountryCity.php?city=$cn[CityCode]'> $cn[AsciiName] </a>
 									  </li>";
 						?>					
 					</ul>
