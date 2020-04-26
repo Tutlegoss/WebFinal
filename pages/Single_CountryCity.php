@@ -11,7 +11,7 @@
 						$fileName = explode(' ',$data['AsciiName'])[0];
 
 						echo "<h2>$data[AsciiName]</h2>";
-						echo '<iframe src="https://maps.google.com/maps?q=' . $data['Longitude'] . ',' . $data['Latitude'] . '&z=15&output=embed" width="600" height="500" frameborder="0" style="border:0"></iframe>';
+						echo '<iframe src="https://maps.google.com/maps?q=' . $data['Latitude'] . ',' . $data['Longitude'] . '&z=15&output=embed" width="600" height="500" frameborder="0" style="border:0"></iframe>';
 						echo '<div class="row justify-content-center">
 						      <div class="col-6">
 							  <div class="card mt-3 mx-auto">
