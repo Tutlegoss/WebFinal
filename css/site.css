@@ -282,7 +282,7 @@ input#search {
 
 #countryCity table {
 	background-color: var(--crepuscule);
-	color: var(--brown);
+	color: var(--tan);
 	font-size: 1.3rem;
 	text-align: left;
 }

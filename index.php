@@ -32,7 +32,7 @@ if(isset($_POST['search'])){
 							<div class="carousel-caption d-none d-sm-block captionBkgnd">
 								<h2>Rate and Review</h2>
 								<h3>Tell the Internet about your experiences.</h3>
-								<h4>Balloon Fest: Best travel destination 2017</h4>
+								<h6>Balloon Fest: Best travel destination 2017</h6>
 							</div>
 						</div>
 					</div>
