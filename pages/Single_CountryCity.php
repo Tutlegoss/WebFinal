@@ -1,7 +1,4 @@
-<?php require_once("../inc/header.inc.php"); 
-	$Lat = 0;
-	$Lon = 0;
-?>
+<?php require_once("../inc/header.inc.php"); ?>
 
 	<div class="container-fluid">
 		<div class="row">
@@ -12,12 +9,9 @@
 					if(isset($_GET['city'])) {
 						$data = getCityInfo($_GET['city']);
 						$fileName = explode(' ',$data['AsciiName'])[0];
-						$Lon = $data['Longitude'];
-						$Lat = $data['Latitude'];
 
 						echo "<h2>$data[AsciiName]</h2>";
-						echo '<div class=" mt-3 mx-auto" id="map"></div>';
-						/*echo '<img src="../img/Maps/'.$fileName.'.PNG" alt="'.$data['AsciiName'].'">';*/
+						echo '<iframe src="https://maps.google.com/maps?q=' . $data['Longitude'] . ',' . $data['Latitude'] . '&z=15&output=embed" width="600" height="500" frameborder="0" style="border:0"></iframe>';
 						echo '<div class="row justify-content-center">
 						      <div class="col-6">
 							  <div class="card mt-3 mx-auto">
@@ -90,21 +84,5 @@
 			</div>
 		</div>
 	</div>
-	
-	<script>
-		// Initialize and add the map
-		function initMap() {
-			// The location of Uluru
-			var uluru = {lat: <?php echo $Lat; ?>, lng: <?php echo $Lon; ?>};
-			// The map, centered at Uluru
-			var map = new google.maps.Map(
-			  document.getElementById('map'), {zoom: 4, center: uluru});
-			// The marker, positioned at Uluru
-			var marker = new google.maps.Marker({position: uluru, map: map});
-		}
-	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-H4WR3-88f0pf20bOl_k3rhRCrPC7_tQ&callback=initMap"
-        type="text/javascript">
-	</script>
 
 <?php require_once("../inc/footer.inc.php"); ?>
