@@ -42,7 +42,7 @@
 					echo "Prepare failed: (" . $conn->errno . ")" . $conn->error;
 					return;
 				}
-				$sql_images->bind_param("ss",  $_GET['continent'], $_GET['country'],);
+				$sql_images->bind_param("ss",  $_GET['continent'], $_GET['country']);
 			}
 
 			$sql_images->execute();
