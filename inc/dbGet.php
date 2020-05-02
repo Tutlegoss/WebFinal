@@ -1,10 +1,9 @@
 <?php
-	require_once($dir . "inc/dbconnect.php");
+	require_once("inc/dbconnect.php");
 	
 	function write2Error_Log($error) 
 	{
-		global $dir;
-		$file     = $dir . "err/Error_Log.txt";
+		$file     = "/err/Error_Log.txt";
 		$content  = file_get_contents($file);
 		$content .= $error . "\n";
 		file_put_contents($file, $content);

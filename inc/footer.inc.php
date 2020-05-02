@@ -1,9 +1,4 @@
-<?php
-	if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] === "/WebFinal/index.php")
-		$dir = "./";
-	else
-		$dir = "../";
-?>
+
 </div>
 	<footer class="container-fluid rounded-0 text-center">
 		<div class="row">

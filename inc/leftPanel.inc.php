@@ -1,4 +1,4 @@
-<?php require_once($dir . "inc/dbGet.php"); ?>
+<?php require_once("inc/dbGet.php"); ?>
 	<div class="col-12 col-lg-2" id="left">
 		<div class="row">
 			<div class="col-4 col-lg-12 pb-3 sidePanel">
@@ -27,7 +27,7 @@
 							$countryNames = getCountryNames();
 							foreach($countryNames as $cn)
 								echo "<li class='list-group-item'>
-										  <a href='".$dir."pages/Single_CountryCity.php?country=$cn[ISO]'> $cn[CountryName] </a>
+										  <a href='/pages/Single_CountryCity.php?country=$cn[ISO]'> $cn[CountryName] </a>
 									  </li>";
 						?>					
 					</ul>
@@ -43,7 +43,7 @@
 							$cityNames = getCityNames();
 							foreach($cityNames as $cn)
 								echo "<li class='list-group-item'>
-										  <a href='".$dir."pages/Single_CountryCity.php?city=$cn[CityCode]'> $cn[AsciiName] </a>
+										  <a href='/pages/Single_CountryCity.php?city=$cn[CityCode]'> $cn[AsciiName] </a>
 									  </li>";
 						?>					
 					</ul>
