@@ -4,7 +4,7 @@ require_once("../inc/header.inc.php");
 
 require_once('../inc/dbconnect.php');
 
-if(isset($_SESSION["signedin"])==0){
+if(isset($_SESSION["signedin"])){
     if(isset($_POST["user"]) && isset($_POST["password"])){
         if ( mysqli_connect_errno() ) {
             printf("Connect failed: %s\n", mysqli_connect_error());
