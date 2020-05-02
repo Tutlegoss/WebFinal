@@ -1,6 +1,7 @@
 <?php
-session_start();
-include_once('dbConnect.php');
+require_once("../inc/header.inc.php");
+require_once('../inc/dbconnect.php');
+
 if(isset($_GET['DisplayOrder']) && !empty($_GET['DisplayOrder'])) {
 	$_SESSION['DisplayOrder'] = $_GET['DisplayOrder'];
 }
@@ -112,76 +113,76 @@ if(isset($sql) && !empty($sql)) {
 	}
 }
 ?>
-<!-- I don't think you can have a radio button outside of a form element. So if the radio is insideof form, -->
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/1462a14240.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-	<link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<div class="container-fluid">
+		<div class="row">
+			<?php include("../inc/leftPanel.inc.php"); ?>
+			
+			<div class="col-12 col-lg-10 mt-3 mb-3">
+				<div class="container d-flex">
+					<div class="row justify-content-center align-self-center mx-auto">
+						<form method="GET" action="">
+							<input type="text" name="DisplayOrder" value="1" style="display: none;">
+							<input id="AscendingButton" type="submit" value="Ascending">
+						</form>
+						<form method="GET" action="">
+							<input type="text" name="DisplayOrder" value="2" style="display: none;">
+							<input id="DescendingButton" type="submit" value="Descending">
+						</form>
 
-<form method="GET" action="">
-	<input type="text" name="DisplayOrder" value="1" style="display: none;">
-	<input id="AscendingButton" type="submit" value="Ascending">
-</form>
-<form method="GET" action="">
-	<input type="text" name="DisplayOrder" value="2" style="display: none;">
-	<input id="DescendingButton" type="submit" value="Descending">
-</form>
+						<form>
+							<input id="radiobutton1" type="radio" name="radio" value="1"><label id="PostLabel">Post Name:</label><input id="PostInput" type="text" name="Post" /><br>
+							<input id="radiobutton2" type="radio" name="radio" value="2"><label>Image Title:</label><input class="ImageSearchForm" type="text" name="Image" /><br>
+							<label class="ImageSearchForm">City: </label><select class="ImageSearchForm" name="City">
+							<option>Choose</option>
+								<?php
+								$sql = "SELECT Distinct(AsciiName) FROM geocities, travelimagedetails WHERE GeoNameID = CityCode ORDER BY AsciiName ASC";
+								$result = mysqli_query($conn, $sql);
+								while($row = mysqli_fetch_array($result)) {
+									echo "<option>" . $row['AsciiName'] . "</option>";
+								};
+								//$sql = "SELECT ImageID, Path, Title, CityCode, travelimagedetails.CountryCodeISO, AsciiName FROM (travelimage NATURAL JOIN travelimagedetails), geocities WHERE CityCode = GeoNameID";
+								echo "</select><br>";
+								?>
+								<label class="ImageSearchForm">Country: </label><select class="ImageSearchForm" name="Country">
+								<option>Choose</option>
+								<?php
+								$sql = "SELECT Distinct(CountryName) FROM geocountries, travelimagedetails WHERE geocountries.ISO = travelimagedetails.CountryCodeISO ORDER BY CountryName ASC";
+								$result = mysqli_query($conn, $sql);
+								while($row = mysqli_fetch_array($result)) {
+									echo "<option>" . $row['CountryName'] . "</option>";
+								};
+								?>
+							</select><br>
+							<input type="submit" />
+						</form>
 
-<form>
-<input id="radiobutton1" type="radio" name="radio" value="1"><label id="PostLabel">Post Name:</label><input id="PostInput" type="text" name="Post" /><br>
-<input id="radiobutton2" type="radio" name="radio" value="2"><label>Image Title:</label><input class="ImageSearchForm" type="text" name="Image" /><br>
-<label class="ImageSearchForm">City: </label><select class="ImageSearchForm" name="City">
-<option>Choose</option>
-<?php
-$sql = "SELECT Distinct(AsciiName) FROM geocities, travelimagedetails WHERE GeoNameID = CityCode ORDER BY AsciiName ASC";
-$result = mysqli_query($conn, $sql);
-while($row = mysqli_fetch_array($result)) {
-	echo "<option>" . $row['AsciiName'] . "</option>";
-};
-//$sql = "SELECT ImageID, Path, Title, CityCode, travelimagedetails.CountryCodeISO, AsciiName FROM (travelimage NATURAL JOIN travelimagedetails), geocities WHERE CityCode = GeoNameID";
-echo "</select><br>";
-?>
-<label class="ImageSearchForm">Country: </label><select class="ImageSearchForm" name="Country">
-<option>Choose</option>
-<?php
-$sql = "SELECT Distinct(CountryName) FROM geocountries, travelimagedetails WHERE geocountries.ISO = travelimagedetails.CountryCodeISO ORDER BY CountryName ASC";
-$result = mysqli_query($conn, $sql);
-while($row = mysqli_fetch_array($result)) {
-	echo "<option>" . $row['CountryName'] . "</option>";
-};
-?>
-</select><br>
-<input type="submit" />
-</form>
-
-<?php
-//$sql = "";
-echo $ultimatesql . "<br>";
-if(isset($_SESSION['radio']) && !empty($_SESSION['radio']) && $_SESSION['radio'] == 1) {
-	//we know we are searching for posts
-	echo "I think the ultimatesql variable is " . $ultimatesql . "<br>";
-	$result = mysqli_query($conn, $ultimatesql);
-	while($row = mysqli_fetch_array($result)) {
-		echo $row['Title'] . "<br>";
-	};
-	$sql = "";
-}
-//else, if the user is searching for images...
-else if(isset($_SESSION['radio']) && !empty($_SESSION['radio']) && $_SESSION['radio'] == 2){
-	//we know we are searching for images
-	//echo "The query is " . $sql . "<br>";
-	$result = mysqli_query($conn, $ultimatesql);
-	while($row = mysqli_fetch_array($result)) {
-		echo "<a href='#'>" . $row['Title'] . "</a><br>" . "<a href='#'><img src='images/thumb/$row[Path]'></a><br><br>";
-	};
-}
-?>
+						<?php
+						//$sql = "";
+						echo $ultimatesql . "<br>";
+						if(isset($_SESSION['radio']) && !empty($_SESSION['radio']) && $_SESSION['radio'] == 1) {
+							//we know we are searching for posts
+							echo "I think the ultimatesql variable is " . $ultimatesql . "<br>";
+							$result = mysqli_query($conn, $ultimatesql);
+							while($row = mysqli_fetch_array($result)) {
+								echo $row['Title'] . "<br>";
+							};
+							$sql = "";
+						}
+						//else, if the user is searching for images...
+						else if(isset($_SESSION['radio']) && !empty($_SESSION['radio']) && $_SESSION['radio'] == 2){
+							//we know we are searching for images
+							//echo "The query is " . $sql . "<br>";
+							$result = mysqli_query($conn, $ultimatesql);
+							while($row = mysqli_fetch_array($result)) {
+								echo "<a href='#'>" . $row['Title'] . "</a><br>" . "<a href='#'><img src='images/thumb/$row[Path]'></a><br><br>";
+							};
+						}
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <script>
 $(function() {
 	$("#radiobutton1").on("click", function() {
@@ -206,3 +207,5 @@ $(function() {
 	});
 });
 </script>
+
+<?php require_once("../inc/footer.inc.php");?>
