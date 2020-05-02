@@ -4,7 +4,7 @@ require_once("../inc/header.inc.php");
 
 require_once('../inc/dbconnect.php');
 
-if(isset($_SESSION["signedin"])){
+if(isset($_SESSION["signedin"])==0){
     if(isset($_POST["user"]) && isset($_POST["password"])){
         if ( mysqli_connect_errno() ) {
             printf("Connect failed: %s\n", mysqli_connect_error());
@@ -47,7 +47,8 @@ if(isset($_SESSION["signedin"])){
         $_SESSION["user"]=$_POST["user"];
         $_SESSION["usertype"]=$_POST["type"];
         $_SESSION["userid"]=$row["ID"];
-        header("index.php");
+        header("Location: https://tutlegoss.com");
+
     }else{
         echo "<br>Your username or password is invalid. Please try again.</br>";
 
@@ -56,11 +57,9 @@ if(isset($_SESSION["signedin"])){
     }
 
     }
-
-
 }else{header("Location: https://tutlegoss.com");}
 echo "login success";
-header("Location: https://tutlegoss.com");
+
 ?>
 
 
