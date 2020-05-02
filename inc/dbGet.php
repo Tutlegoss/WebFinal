@@ -3,7 +3,7 @@
 	
 	function write2Error_Log($error) 
 	{
-		$file     = "/err/Error_Log.txt";
+		$file     = "err/Error_Log.txt";
 		$content  = file_get_contents($file);
 		$content .= $error . "\n";
 		file_put_contents($file, $content);
