@@ -58,9 +58,9 @@ if(isset($_SESSION["signedin"])==0){
     }
 
 
-}else{header("Location: ../index.php");}
+}else{header("Location: tutlegoss.com");}
 echo "login success";
-header("Location: ../index.php");
+header("Location: tutlegoss.com");
 ?>
 
 
