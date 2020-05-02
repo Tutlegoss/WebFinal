@@ -44,6 +44,8 @@ if(isset($_POST['search'])){
 									<li>Display Single Travel Image</li>
 									<li>Display Simple Search</li>
 									<li>Display Search Results </li>
+									<li>Registration page</li>
+									<li>Sign in page</li>
 								</ul>
 							</td>
 						</tr>
