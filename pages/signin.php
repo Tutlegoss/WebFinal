@@ -11,7 +11,7 @@ require_once("../inc/header.inc.php");
 
 
 
-require_once('../inc/dbconnect.php');
+require_once('dbconnect.php');
 
 if(isset($_SESSION["signedin"])==0){
     if(isset($_POST["user"]) && isset($_POST["password"])){
