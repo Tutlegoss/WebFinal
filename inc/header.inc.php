@@ -47,10 +47,10 @@ error_reporting(E_ALL);
 				<a class="nav-link" href="#">My Account</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="#">Register</a>
+				<a class="nav-link" href="/pages/logoff.php">Register</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="#">Login</a>
+				<a class="nav-link" href="/pages/signin.php">Login</a>
 			  </li>
 			</ul>
 		  </div>
