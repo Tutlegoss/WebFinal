@@ -78,7 +78,7 @@ require_once('../inc/dbconnect.php');
 					die('This account cannot be created. Please try again later.');
 				}
 				mysqli_close($conn);
-				header("../index.php");		
+				//header("../index.php");		
 			}
 		}
     ?>
