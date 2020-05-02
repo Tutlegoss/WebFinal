@@ -2,8 +2,17 @@
 ob_start();
 require_once("../inc/header.inc.php");
 ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 
 <?php
+
+
+
+
+require_once('dbconnect.php');
+
 if(isset($_SESSION["signedin"])==0){
     if(isset($_POST["user"]) && isset($_POST["password"])){
         if ( mysqli_connect_errno() ) {
@@ -49,45 +58,73 @@ if(isset($_SESSION["signedin"])==0){
 
     }
 }else{header("Location: https://tutlegoss.com");}
-?>
-	<div class="container-fluid">
-		<div class="row">
-			<?php include("../inc/leftPanel.inc.php"); ?>
-			
-			<div class="col-12 col-lg-10 mt-3 mb-3">
-				<div class="row justify-content-center align-self-center mx-auto">
-					<div class="col-9">
-						<h3> Sign in Below</h3>
-						<hr>
-						<p> Please enter your username, and password </p>
-					</div>
-					<div class="col-12 col-md-8 col-lg-6">
-						<form method = "post" id="forms">
-							<table width = "400" border = "0" cellspacing = "1" cellpadding = "2">
-								<tr>
-								   <td width = "250">Username</td>
-								   <td>
-									  <input name = "user" type = "text" id = "user">
-								   </td></tr>
-							 
-								<tr>
-								   <td width = "200">Password</td>
-								   <td>
-									  <input name = "password" type = "text" id = "password">
-								   </td></tr>
 
-								<tr>
-								   <td width = "200"> </td>
-								   <td>
-									  <input name = "signin" type = "submit" id = "signin"  value = "Sign in">
-								   </td>
-								</tr>		
-							</table> 
-						</form>
-					</div>
+?>
+
+
+<div class="container d-flex h-100">
+			<div class="row justify-content-center align-self-center mx-auto">
+				<div class="col-9">
+					<h3> Sign in Below</h3>
+					<hr>
+					<p> Please enter your username, and password </p>
+				</div>
+				<div class="col-12 col-md-8 col-lg-6">
+					<form method = "post" id="forms">
+						<table width = "400" border = "0" cellspacing = "1" cellpadding = "2">
+							<tr>
+							   <td width = "250">Username</td>
+							   <td>
+								  <input name = "user" type = "text" id = "user">
+							   </td></tr>
+						 
+						 
+							<tr>
+							   <td width = "200">Password</td>
+							   <td>
+								  <input name = "password" type = "text" id = "password">
+							   </td></tr>
+
+							<tr>
+							   <td width = "200"> </td>
+							   <td>
+								  <input name = "signin" type = "submit" id = "signin"  value = "Sign in">
+							   </td>
+							</tr>		
+						</table> 
+					</form>
 				</div>
 			</div>
 		</div>
-	</div>
 
-<?php require_once("../inc/footer.inc.php");?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <?php require_once("../inc/footer.inc.php");?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
