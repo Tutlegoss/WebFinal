@@ -1,6 +1,6 @@
 <?php
 ob_start();
-
+require_once("../inc/header.inc.php");
 require_once('../inc/dbconnect.php');
 
 if(isset($_SESSION["signedin"])==0){
@@ -37,6 +37,7 @@ if(isset($_SESSION["signedin"])==0){
         $_SESSION["user"]=$_POST["user"];
         $_SESSION["usertype"]=$_POST["type"];
         $_SESSION["userid"]=$row["ID"];
+		
         header("Location: https://tutlegoss.com");
 
     }else{
@@ -49,7 +50,6 @@ if(isset($_SESSION["signedin"])==0){
     }
 }else{header("Location: https://tutlegoss.com");}
 
-require_once("../inc/header.inc.php");
 ?>
 
 

@@ -1,6 +1,6 @@
 <?php
 ob_start();
-
+require_once("../inc/header.inc.php");
 require_once('../inc/dbconnect.php');
 
 function validateEm($email) {
@@ -81,7 +81,7 @@ function validateEm($email) {
 				header("/signin.php");		
 			}
 		}
-require_once("../inc/header.inc.php");
+
 ?>
         
 	<div class="container-fluid">
