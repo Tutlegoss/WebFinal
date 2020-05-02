@@ -23,10 +23,7 @@ if(isset($_SESSION["signedin"])==0){
     echo "user is";
     echo $user;
     $sql=$conn->prepare("Select * from accounts where User=?");
-    if(!$sql->bind_param("s",$user)){
-        die("Binding error occured 0: ".$sql->error."");
-    }
-    //$result=mysqli_query($conn,$sql);
+    $sql->bind_param("s",$user);
     $result=$sql->execute();
     if (!$result) {
         printf("Error 0: %s\n", mysqli_error($conn));
@@ -34,16 +31,10 @@ if(isset($_SESSION["signedin"])==0){
 }
 
     $verify=0;
-    //$num=mysqli_num_rows($result);
     $rows=$sql->get_result();
     $row=$rows->fetch_assoc();
     $num=$rows->num_rows;
-    echo "num of rows: ";
-    echo $num;
-    //$row=mysqli_fetch_row($result);
-    echo "username in database";
-    echo $row["User"];
-    //echo $result;
+    
     if($num==1){
         $hpw=$row["Password"];
         if(password_verify($Password, $hpw)){
