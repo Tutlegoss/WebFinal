@@ -77,7 +77,7 @@ function validateEm($email) {
 				if(! $retval ) {
 					die('This account cannot be created. Please try again later.');
 				}
-				mysqli_close($conn);
+
 				header("/signin.php");		
 			}
 		}
