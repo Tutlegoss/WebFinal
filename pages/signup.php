@@ -1,7 +1,12 @@
 <?php
 ob_start();
-//require_once("../inc/header.inc.php");
+require_once("../inc/header.inc.php");
+?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
+
+<?php
 function validateEm($email) {
     $pattern = '/^[\-0-9a-zA-Z\.\+_]+@[\-0-9a-zA-Z\.\+_]+\.[a-zA-Z\.]{2,5}$/';
     if ( preg_match($pattern, $email) ) {
@@ -131,7 +136,7 @@ require_once('../inc/dbconnect.php');
 
 
 
-
+		<?php require_once("../inc/footer.inc.php");?>
 
 
 
