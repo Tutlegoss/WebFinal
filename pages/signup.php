@@ -1,12 +1,8 @@
 <?php
 ob_start();
-require_once("../inc/header.inc.php");
-?>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
+require_once('../inc/dbconnect.php');
 
-<?php
 function validateEm($email) {
     $pattern = '/^[\-0-9a-zA-Z\.\+_]+@[\-0-9a-zA-Z\.\+_]+\.[a-zA-Z\.]{2,5}$/';
     if ( preg_match($pattern, $email) ) {
@@ -23,7 +19,6 @@ function validateEm($email) {
     return false;
  }
 
-require_once('../inc/dbconnect.php');
 
 		if ( mysqli_connect_errno() ) {
     			printf("Connect failed: %s\n", mysqli_connect_error());
@@ -86,59 +81,55 @@ require_once('../inc/dbconnect.php');
 				header("/signin.php");		
 			}
 		}
-    ?>
+require_once("../inc/header.inc.php");
+?>
         
-		<div class="container d-flex h-100">
-			<div class="row justify-content-center align-self-center mx-auto">
-				<div class="col-9">
-					<h3> Create your account</h3>
-					<hr>
-					<p> Please enter your username, your email, and password </p>
-				</div>
-				<div class="col-12 col-md-8 col-lg-6">
-					<form method = "post" id="forms">
-						<table width = "400" border = "0" cellspacing = "1" cellpadding = "2">
-							<tr>
-							   <td width = "250">Username</td>
-							   <td>
-								  <input name = "user" type = "text" id = "user">
-							   </td></tr>
-						 
-							<tr>
-							   <td width = "200" >Email Address</td>
-							   <td>
-								  <input name = "email" type = "text" id = "email" placeholder="@mail.com">
-							   </td></tr>
-						 
-							<tr>
-							   <td width = "200">Password</td>
-							   <td>
-								  <input name = "password" type = "text" id = "password" placeholder="8-30 Chars">
-							   </td></tr>
+	<div class="container-fluid">
+		<div class="row">
+			<?php include("../inc/leftPanel.inc.php"); ?>
+			
+			<div class="col-12 col-lg-10 mt-3 mb-3">
+				<div class="container d-flex">
+					<div class="row justify-content-center align-self-center mx-auto">
+						<div class="col-9">
+							<h3> Create your account</h3>
+							<hr>
+							<p> Please enter your username, your email, and password </p>
+						</div>
+						<div class="col-9">
+							<form method = "post" id="forms">
+								<table width = "400" border = "0" cellspacing = "1" cellpadding = "2">
+									<tr>
+									   <td width = "250">Username</td>
+									   <td>
+										  <input name = "user" type = "text" id = "user">
+									   </td></tr>
+								 
+									<tr>
+									   <td width = "200" >Email Address</td>
+									   <td>
+										  <input name = "email" type = "text" id = "email" placeholder="@mail.com">
+									   </td></tr>
+								 
+									<tr>
+									   <td width = "200">Password</td>
+									   <td>
+										  <input name = "password" type = "text" id = "password" placeholder="8-30 Chars">
+									   </td></tr>
 
-							<tr>
-							   <td width = "200"> </td>
-							   <td>
-								  <input name = "create" type = "submit" id = "create"  value = "Create account">
-							   </td>
-							</tr>		
-						</table> 
-					</form>
+									<tr>
+									   <td width = "200"> </td>
+									   <td>
+										  <input class="btn btnArt" name = "create" type = "submit" id = "create"  value = "Create account">
+									   </td>
+									</tr>		
+								</table> 
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	
-
-
-
-
-
-
-
-
-		<?php require_once("../inc/footer.inc.php");?>
-
-
-
-
-
+<?php require_once("../inc/footer.inc.php");?>

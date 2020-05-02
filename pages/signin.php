@@ -1,6 +1,8 @@
 <?php
 ob_start();
 
+require_once('../inc/dbconnect.php');
+
 if(isset($_SESSION["signedin"])==0){
     if(isset($_POST["user"]) && isset($_POST["password"])){
         if ( mysqli_connect_errno() ) {
