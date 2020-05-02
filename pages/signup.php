@@ -114,7 +114,7 @@ require_once("../inc/header.inc.php");
 									<tr>
 									   <td width = "200">Password</td>
 									   <td>
-										  <input name = "password" type = "text" id = "password" placeholder="8-30 Chars">
+										  <input name = "password" type = "password" id = "password" placeholder="8-30 Chars">
 									   </td></tr>
 
 									<tr>
