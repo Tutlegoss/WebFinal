@@ -58,7 +58,6 @@ if(isset($_SESSION["signedin"])==0){
 
     }
 }else{header("Location: https://tutlegoss.com");}
-echo "login success";
 
 ?>
 
