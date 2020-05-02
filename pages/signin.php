@@ -22,7 +22,7 @@ if(isset($_SESSION["signedin"])==0){
     $Password=$_POST["password"];
     echo "user is";
     echo $user;
-    $sql=$conn->prepare("Select * from accounts where User=?");
+    $sql=$conn->prepare("Select * from Accounts where User=?");
     $sql->bind_param("s",$user);
     $result=$sql->execute();
     if (!$result) {
