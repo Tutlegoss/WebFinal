@@ -1,6 +1,15 @@
 <?php
 ob_start();
 require_once("../inc/header.inc.php");
+?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+<?php
+
+
+
 
 require_once('../inc/dbconnect.php');
 
@@ -113,7 +122,7 @@ if(isset($_SESSION["signedin"])==0){
 
 
 
-
+        <?php require_once("../inc/footer.inc.php");?>
 
 
 
