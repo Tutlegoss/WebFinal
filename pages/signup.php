@@ -1,6 +1,6 @@
 <?php
 ob_start();
-require_once("../inc/header.inc.php");
+//require_once("../inc/header.inc.php");
 
 function validateEm($email) {
     $pattern = '/^[\-0-9a-zA-Z\.\+_]+@[\-0-9a-zA-Z\.\+_]+\.[a-zA-Z\.]{2,5}$/';
