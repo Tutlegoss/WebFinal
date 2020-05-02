@@ -47,10 +47,14 @@ error_reporting(E_ALL);
 				<a class="nav-link" href="#">My Account</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="/pages/logoff.php">Register</a>
+				<a class="nav-link" href="/pages/signup.php">Register</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="/pages/signin.php">Login</a>
+				<?php if(isset($_SESSION["signedin"])==1){
+				  echo '<a class="nav-link" href="../pages/logoff.php">Log off</a>';
+			  }else{
+				echo '<a class="nav-link" href="../pages/signin.php">Login</a>';
+			  }?>
 			  </li>
 			</ul>
 		  </div>
