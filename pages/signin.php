@@ -81,7 +81,7 @@ require_once("../inc/header.inc.php");
 									<tr>
 									   <td width = "200"> </td>
 									   <td>
-										  <input name = "signin" type = "submit" id = "signin"  value = "Sign in">
+										  <input class="btn btnArt" name = "signin" type = "submit" id = "signin"  value = "Sign in">
 									   </td>
 									</tr>		
 								</table> 
