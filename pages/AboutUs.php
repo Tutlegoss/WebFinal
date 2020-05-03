@@ -29,10 +29,16 @@
 											<li>Browse Travel Images</li>
 											<li>Browse Posts / Users</li>
 											<li>Display Single Country/City</li>
+											<li>Display Single User</li>
 										</ul>
 									</li>
-									<li>Advertisements</li>
-									<li>Username Display</li>
+									<li>Part II
+										<ul>
+											<li>Username Display</li>
+											<li>Advertisements</li>
+											<li>Home Page Two Most Recent</li>
+										</ul>
+									</li>
 								</ul>
 							</td>
 						</tr>
@@ -40,12 +46,20 @@
 							<td>Brandon Jacobs</td>
 							<td>
 								<ul>
-									<li>Display Single Post</li>
-									<li>Display Single Travel Image</li>
-									<li>Display Simple Search</li>
-									<li>Display Search Results </li>
-									<li>Registration page</li>
-									<li>Sign in page</li>
+									<li>Part I
+										<ul>
+											<li>Display Single Post</li>
+											<li>Display Single Travel Image</li>
+											<li>Display Simple Search</li>
+											<li>Display Search Results </li>
+										</ul>
+									</li>
+									<li>Part II
+										<ul>
+											<li>Registration page</li>
+											<li>Sign in page</li>
+										</ul>
+									</li>
 								</ul>
 							</td>
 						</tr>
@@ -53,10 +67,18 @@
 							<td>Michael Partridge</td>
 							<td>
 								<ul>
-									<li>Add To Favorites</li>
-									<li>View Favorites</li>
-									<li>Advanced Search</li>
-									<li>Display Single User</li>
+									<li>Part I
+										<ul>
+											<li>Add To Favorites</li>
+											<li>View Favorites</li>
+											<li>Advanced Search</li>
+										</ul>
+									</li>
+									<li>Part II
+										<ul>
+											
+										</ul>
+									</li>
 								</ul>
 							</td>
 						</tr>

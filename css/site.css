@@ -86,7 +86,7 @@ a:hover {
 	background-image: url("/img/BK.png");
 }
 
-#adV {
+#adV a {
 	width: 172px; 
 	height: 350px; 
 	display: block;
