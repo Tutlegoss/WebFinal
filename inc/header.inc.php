@@ -40,7 +40,7 @@ error_reporting(E_ALL);
 				<a class="nav-link" href="#">View Favorites List</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="#">My Account</a>
+				<a class="nav-link" href="#"><?php if(isset($_SESSION["user"])) echo $_SESSION["user"] . "'s"; else echo "My"; ?> Account</a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link" href="/pages/signup.php">Register</a>
