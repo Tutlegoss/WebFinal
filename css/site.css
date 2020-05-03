@@ -68,6 +68,30 @@ a:hover {
 	color: var(--navy);
 }
 
+#adH {
+	width: 200px;
+	height: 72px;
+	background-image: url("/WebFinal/img/Trivago.png");
+}
+
+#adH a {
+	width: 200px;
+	height: 72px;
+	display: block;
+}
+
+#adV {
+	width: 172px; 
+	height: 350px; 
+	background-image: url("/WebFinal/img/BK.png");
+}
+
+#adV {
+	width: 172px; 
+	height: 350px; 
+	display: block;
+}
+
 /* Navbar Styles */
 /* --------------------------------------------------------*/
 header nav:first-child {

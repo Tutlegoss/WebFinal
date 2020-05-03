@@ -88,4 +88,5 @@ error_reporting(E_ALL);
 				</form>
 			</div>  
 		</nav>
+		<div class="mx-auto mt-3" id="adH"><a href="https://www.trivago.com/"></a></div>
 	</header>

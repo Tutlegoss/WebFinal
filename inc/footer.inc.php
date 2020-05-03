@@ -1,4 +1,4 @@
-
+<div class="row mt-3 mb-3 col-2 mx-auto" id="adV"><a href="https://www.bk.com/"></a></div>
 </div>
 	<footer class="container-fluid rounded-0 text-center">
 		<div class="row">
