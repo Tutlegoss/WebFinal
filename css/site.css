@@ -81,14 +81,15 @@ a:hover {
 }
 
 #adV {
-	min-width: 172px; 
-	min-height: 350px; 
+	max-width: 172px; 
+	max-height: 350px; 
 	background-image: url("/img/BK.png");
+	background-repeat: no-repeat;
 }
 
 #adV a {
-	min-width: 172px; 
-	min-height: 350px; 
+	max-width: 172px; 
+	max-height: 350px; 
 	display: block;
 }
 
