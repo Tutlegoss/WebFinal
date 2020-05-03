@@ -282,3 +282,27 @@
 			write2Error_Log("getCountryInfo(): " . $e);
 		}		
 	}
+	
+/* Function for single_user.php */
+	function getUserInfo($ID)
+	{
+		global $conn;
+		try {
+			if(!($sql_country = $conn->prepare("SELECT *
+			                                    FROM   traveluserdetails
+											    WHERE  UID = ?;"))) {
+				write2Error_Log("SELECT * in function getUserInfo()");
+				return;
+			}
+			
+			$sql_country->bind_param("s",$ID);
+			$sql_country->execute();
+			$res_country = $sql_country->get_result();
+
+			$sql_country->close();
+			return $res_country->fetch_assoc();			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getUserInfo(): " . $e);
+		}		
+	}

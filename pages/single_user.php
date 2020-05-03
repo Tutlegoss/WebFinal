@@ -1,0 +1,71 @@
+<?php require_once("../inc/header.inc.php"); ?>
+
+	<div class="container-fluid">
+		<div class="row">
+			<?php include("../inc/leftPanel.inc.php"); ?>
+
+			<div class="col-12 col-lg-10 mt-3 mb-3" id="countryCity">
+				<?php 
+					if(isset($_GET['id'])) {
+						$data = getUserInfo($_GET['id']);
+
+						echo "<h2>$data[FirstName] $data[LastName]</h2>";
+	
+						echo '<div class="row justify-content-center">
+							  <div class="col-6">
+							  <div class="card mx-auto">
+								  <table class="table mb-0"> 
+									  <tr>
+										  <th scope="row">Address:</th>
+										  <td>';
+										  if($data['Privacy'] == 2)
+											  echo "Hidden";
+										  else
+											  echo $data['Address'];
+										  echo'</td>
+									  </tr>
+									  <tr>
+										  <th scope="row">City:</th>
+										  <td>'.$data['City'].'</td>
+									  </tr>
+									  <tr>
+										  <th scope="row">Region:</th>
+										  <td>'.$data['Region'].'</td>
+									  </tr>
+									  <tr>
+										  <th scope="row">Country:</th>
+										  <td>'.$data['Country'].'</td>
+									  </tr>
+									  <tr>
+										  <th scope="row">Postal:</th>
+										  <td>';
+										  if($data['Privacy'] == 2)
+											  echo "Hidden";
+										  else
+											  echo $data['Postal'];
+										  echo'</td>
+									  </tr>
+									  <tr>
+										  <th scope="row">Phone:</th>
+										  <td>';
+										  if($data['Privacy'] == 2)
+											  echo "Hidden";
+										  else
+											  echo $data['Phone'];
+										  echo'</td>
+									  </tr>
+									  <tr>
+										  <th scope="row">Email:</th>
+										  <td>'.$data['CurrencyCode'].'</td>
+									  </tr>
+								  </table>
+							  </div>
+							  </div>
+							  </div>';
+					}
+				?>
+			</div>
+		</div>
+	</div>
+
+<?php require_once("../inc/footer.inc.php"); ?>
