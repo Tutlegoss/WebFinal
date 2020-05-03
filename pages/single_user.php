@@ -56,7 +56,7 @@
 									  </tr>
 									  <tr>
 										  <th scope="row">Email:</th>
-										  <td>'.$data['CurrencyCode'].'</td>
+										  <td>'.$data['Email'].'</td>
 									  </tr>
 								  </table>
 							  </div>
