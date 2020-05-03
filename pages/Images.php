@@ -81,8 +81,8 @@
 			var param     = "country=" + country + "&continent=" + continent;
 			$('#empty').remove();
 			$('#displayImgs').remove();
-			//$('#country').val('');
-			//$('#continent').val('');
+			$('#country').val('');
+			$('#continent').val('');
 			
 
 			if(country == null && continent == null) {
