@@ -20,13 +20,19 @@
 							<td>Landen Marchand</td>
 							<td>
 								<ul>
-									<li>Bootstrap Theme and Site Design</li>
-									<li>Home Page</li>
-									<li>Navigation</li>
-									<li>About Us</li>
-									<li>Browse Travel Images</li>
-									<li>Browse Posts / Users</li>
-									<li>Display Single Country/City</li>
+									<li>Part I
+										<ul>
+											<li>Bootstrap Theme and Site Design</li>
+											<li>Home Page</li>
+											<li>Navigation</li>
+											<li>About Us</li>
+											<li>Browse Travel Images</li>
+											<li>Browse Posts / Users</li>
+											<li>Display Single Country/City</li>
+										</ul>
+									</li>
+									<li>Advertisements</li>
+									<li>Username Display</li>
 								</ul>
 							</td>
 						</tr>
