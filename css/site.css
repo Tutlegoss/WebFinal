@@ -71,7 +71,7 @@ a:hover {
 #adH {
 	width: 200px;
 	height: 72px;
-	background-image: url("/WebFinal/img/Trivago.png");
+	background-image: url("/img/Trivago.png");
 }
 
 #adH a {
@@ -83,7 +83,7 @@ a:hover {
 #adV {
 	width: 172px; 
 	height: 350px; 
-	background-image: url("/WebFinal/img/BK.png");
+	background-image: url("/img/BK.png");
 }
 
 #adV {
