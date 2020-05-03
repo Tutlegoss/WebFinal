@@ -12,27 +12,27 @@ if(isset($_POST['search'])){
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<!-- https://earthchallenge2020.earthday.org/ -->
-							<img src="./img/Earth.jpg" class="d-block w-100 carousel-height" alt="...">
+							<img src="./img/Earth.jpg" href="./pages/Image.php" class="d-block w-100 carousel-height" alt="Explore">
 							<div class="carousel-caption d-none d-sm-block">
 								<h2>Explore the World</h2>
 								<h3>Discover exotic places anywhere, anytime.</h3>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<!-- http://weknowyourdreams.com/photography.html -->
-							<img src="./img/Photography.jpg" class="d-block w-100 carousel-height" alt="...">
+							<!-- https://www.tutlegoss.com/pages/Images.php -->
+							<img src="./img/BH.jpg" href="./pages/search.php?filter=''" class="d-block w-100 carousel-height" alt="Post">
 							<div class="carousel-caption d-none d-sm-block">
-								<h2>Post Images</h2>
-								<h3>Share your wonderful images from around the world.</h3>
+								<h2>Read Articles</h2>
+								<h3>Read up on places before you visit.</h3>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<!-- https://www.dailysabah.com/turkey/2019/07/02/cappadocia-awaits-tourists-for-magical-hot-air-balloon-fest#gallery -->
-							<img src="./img/Balloons.jpg" class="d-block w-100 carousel-height" alt="...">
+						
+							<img src="./img/large/6592317633.jpg" href="single_image.php?id=3" class="d-block w-100 carousel-height" alt="...">
 							<div class="carousel-caption d-none d-sm-block captionBkgnd">
 								<h2>Rate and Review</h2>
 								<h3>Tell the Internet about your experiences.</h3>
-								<h6>Balloon Fest: Best travel destination 2017</h6>
+								<h6>Featured: Grace Presbyterian Church</h6>
 							</div>
 						</div>
 					</div>
