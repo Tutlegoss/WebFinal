@@ -9,10 +9,13 @@
 					<ul class="list-group list-group-flush">
 						<?php 
 							$continentNames = getContinentNames();
-							foreach($continentNames as $cn)
+							$i = 1;
+							foreach($continentNames as $cn) {
 								echo "<li class='list-group-item'>
-										  <a href=#> $cn[ContinentName] </a>
+										  <a href='/pages/Images.php?CC=$i'> $cn[ContinentName] </a>
 									  </li>";
+								++$i;
+							}
 						?>					
 					</ul>
 				</div>

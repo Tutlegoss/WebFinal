@@ -15,7 +15,7 @@
 						foreach($newPost as $p) {
 							echo 	'<tr>
 										<td class="" style="font-size: 1.5rem;">
-											<a href="./single_post.php?id=' . $p['PostID'] . '">
+											<a href="./Single_Post.php?id=' . $p['PostID'] . '">
 												<span>' . $p['Title'] . '</span>
 											</a>
 										</td>

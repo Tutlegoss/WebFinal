@@ -81,8 +81,8 @@
 			var param     = "country=" + country + "&continent=" + continent;
 			$('#empty').remove();
 			$('#displayImgs').remove();
-			$('#country').val('');
-			$('#continent').val('');
+			//$('#country').val('');
+			//$('#continent').val('');
 			
 
 			if(country == null && continent == null) {
@@ -108,9 +108,18 @@
 												 '</a></li>');
 					}
 					$('#imgFilter').append('</ul>');
+					if(data.length == 0)
+						$('#imgFilter').append('<h3 class="mt-3 text-center" id="empty">' + "Sorry, no results for selection. Try again." + "</h3>");
 
 				}
 			});
 		});	
+		
+		<?php 
+			if(isset($_GET['CC'])) {
+		?>
+				$('#continent>option:eq(<?php echo $_GET['CC']; ?>)').prop('selected',true);
+				$("#btn1").trigger("click");
+		<?php } ?>
 	</script>
 <?php require_once("../inc/footer.inc.php"); ?>
