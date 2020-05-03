@@ -159,6 +159,30 @@
 		}
 	}
 	
+	function getTwoRatings()
+	{
+		global $conn;
+		try {
+			if(!($sql_two = $conn->prepare("SELECT   Review, ReviewTime, ImageID
+				                            FROM     travelimagerating
+											ORDER BY ReviewTime DESC"))) {
+				write2Error_Log("SELECT Review ReviewTime ImageID in function getTwoRatings()");
+				return;
+			}
+			
+			$sql_two->execute();
+			$res_two = $sql_two->get_result();
+
+			for($i = 0; $i < 2; ++$i) 
+				$returned_Data[] = $res_two->fetch_assoc();
+			$sql_two->close();
+			return $returned_Data;			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getTwoRatings(): " . $e);
+		}
+	}
+	
 /* Function for Posts.php */
 	function getPostList()
 	{

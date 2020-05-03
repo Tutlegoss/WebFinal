@@ -218,7 +218,7 @@ input#search {
 	background-color: rgba(0,0,0,0.6);
 }
 
-#indexRating, #newAdditions {
+#indexRating, #newAdditions, #twoRecent {
 	color: var(--navy);
 	border: 2px solid var(--teal);
 }

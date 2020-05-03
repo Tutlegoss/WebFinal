@@ -96,7 +96,28 @@ if(isset($_POST['search'])){
 											 </tr>'; 
 								}				
 							?> 						
-						</table>	
+						</table>
+						<table class="table mt-3 mb-0" id="newAdditions">
+							<tr class="text-center">
+								<th colspan="2">Two Most Recent Posts</td>
+							</tr>
+							<?php 
+								$twoRecent = getTwoRatings(); 
+
+								foreach($twoRecent as $p) {
+									echo 	'<tr>
+												<td class="text-center">
+													<a href="./pages/single_image.php?id=' . $p['ImageID'] . '">
+														<span>' . substr($p['Review'],0,100) . "..." . '</span>
+													</a>
+												</td>
+												<td class="">'
+													. explode(' ',trim($p['ReviewTime']))[0] .
+												'</td>
+											 </tr>'; 
+								}				
+							?> 						
+						</table>
 					</div>
 				</div>
 			</div>
