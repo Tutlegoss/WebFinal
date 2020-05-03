@@ -11,7 +11,7 @@ if(isset($_POST['search'])){
 				<div id="carouselSwitch" class="carousel slide carousel-fade" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<a href="./pages/Image.php">
+							<a href="./pages/Images.php">
 								<!-- https://earthchallenge2020.earthday.org/ -->
 								<img src="./img/Earth.jpg" class="d-block w-100 carousel-height" alt="Explore">
 								<div class="carousel-caption d-none d-sm-block">
