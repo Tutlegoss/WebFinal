@@ -81,14 +81,14 @@ a:hover {
 }
 
 #adV {
-	width: 172px; 
-	height: 350px; 
+	min-width: 172px; 
+	min-height: 350px; 
 	background-image: url("/img/BK.png");
 }
 
 #adV a {
-	width: 172px; 
-	height: 350px; 
+	min-width: 172px; 
+	min-height: 350px; 
 	display: block;
 }
 
