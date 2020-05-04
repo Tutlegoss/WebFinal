@@ -13,8 +13,11 @@ require_once('../inc/dbconnect.php');
 echo "a page";
 echo $_SESSION["usertype"];
 if(isset($_SESSION["signedin"])==1){
-    if(isset($_SESSION["usertype"])=="Admin"){
+    if(isset($_SESSION["usertype"])){
+        $c=$_SESSION["usertype"];
         echo "is treu";
+        echo $_SESSION["usertype"];
+        if($c=="Admin"){
         if ( mysqli_connect_errno() ) {
             printf("Connect failed: %s\n", mysqli_connect_error());
     }
@@ -38,13 +41,14 @@ if(isset($_SESSION["signedin"])==1){
         echo '<tr><th><a href="/pages/edituser.php?uid='.$row["UID"].'">edit</a></th><th align=left style="padding: 36px;">'.$row["FirstName"].'</th><th align=left>'.$row["LastName"].'</th><th align=left>'.$row["Address"].'</th><th align=left>'.$row["City"].'</th><th align=left>'.$row["Region"].'</th><th align=left>'.$row["Country"].'</th><th align=left>'.$row["Postal"].'</th><th align=left>'.$row["Phone"].'</th><th align=left>'.$row["Email"].'</th><th align=left>'.$row["Privacy"].'</th></tr>';
     }
     echo '</td></table></div></div></div>';
-    }else{echo "not an admin...";
-        echo $_SESSION["usertype"];
-        echo "<br>";
-        echo $_SESSION["user"];
-        echo "<br>";
-        echo "above check";
+    
+    }else{
+        header("Location: https://tutlegoss.com");
     }
+}
+}else{
+    header("Location: https://tutlegoss.com");
+
 }
 
 
