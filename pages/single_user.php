@@ -4,7 +4,7 @@
 		<div class="row">
 			<?php include("../inc/leftPanel.inc.php"); ?>
 
-			<div class="col-12 col-lg-10 mt-3 mb-3" id="countryCity">
+			<div class="col-12 col-lg-10 mt-3 mb-3" id="singleUser">
 				<?php 
 					if(isset($_GET['id'])) {
 						$data = getUserInfo($_GET['id']);
@@ -64,6 +64,21 @@
 							  </div>';
 					}
 				?>
+				<div class="row">
+					<div class="col-12 mb-3">
+						<?php
+							$photos = getUserPhotos($_GET['id']);
+							$posts = getUserPosts($_GET['id']);
+							
+							foreach($photos as $p) {
+								echo "<div class='border rounded'>
+										<img src='/img/square-medium/$p[Path]' class='imagePadding imageSize img-responsive' alt='$p[Title]' >
+										<p class='mt-2'><a href='/pages/single_image.php?id=$p[ImageID]'>$[Title]</a></p>
+									  </div>";
+							}
+						?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

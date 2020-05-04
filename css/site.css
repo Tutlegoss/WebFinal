@@ -289,23 +289,23 @@ input#search {
 	color: var(--navy);
 }	
 
-/* Single_CountryCity.php */
-#countryCity {
+/* Single_CountryCity.php / single_user.php  */
+#countryCity, #singleUser {
 	text-align: center;
 }
 
-#countryCity h2{
+#countryCity h2, #singleUser h2{
 	color: var(--teal);
 	font-family: var(--libre);
 }
 
-#countryCity img {
+#countryCity img, #singleUser img {
 	border: 2px solid var(--navy);
 	 width: 600px;
 	height: 500px;
 }
 
-#countryCity table {
+#countryCity table, #singleUser table {
 	background-color: var(--crepuscule);
 	color: var(--tan);
 	font-size: 1.3rem;
@@ -324,4 +324,20 @@ input#search {
 	width: 600px;
 	height: 500px;
 	background-color: grey;
+}
+
+.imageSize {
+	width: 130px;
+	height: 130px;
+}
+
+.imagePadding {
+	margin-top: .4rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.textSize {
+	font-size: 1.5rem;
+	padding-left: 17px;
 }

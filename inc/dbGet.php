@@ -283,7 +283,7 @@
 		}		
 	}
 	
-/* Function for single_user.php */
+/* Functions for single_user.php */
 	function getUserInfo($ID)
 	{
 		global $conn;
@@ -304,5 +304,58 @@
 		}
 		catch (Exception $e) {
 			write2Error_Log("getUserInfo(): " . $e);
+		}		
+	}
+	
+	function getUserPhotos($ID)
+	{
+		global $conn;
+		try {
+			if(!($sql_photos = $conn->prepare("SELECT  Path, travelImage.ImageID as ImageID, travelimagedetails.Title as Title,
+			                                   FROM   ((travelpost JOIN travelPostImages 
+												        ON travelpost.postID = travelpostimages.postID)
+														JOIN travelimage ON travelpostimages.ImageID = travelimage.ImageID)
+														JOIN travelimagedetails ON travelimage.ImageID = travelimagedetails.ImageID
+											   WHERE  travelpost.UID = ?;"))) {
+				write2Error_Log("SELECT * in function getUserPhotos()");
+				return;
+			}
+			
+			$sql_photos->bind_param("s",$ID);
+			$sql_photos->execute();
+			while($res_photos = $sql_photos->get_result())
+				$returned_Data[] = $row_photos;
+
+			$sql_photos->close();
+			return $res_country->fetch_assoc();			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getUserPhotos(): " . $e);
+		}		
+	}
+	
+	function getUserPosts($ID)
+	{
+		global $conn;
+		try {
+			if(!($sql_posts = $conn->prepare("SELECT DISTINCT(travelpost.Title) as Title, Message, travelpost.PostID as PostID
+			                                  FROM   (travelpost JOIN travelPostImages 
+												        ON travelpost.postID = travelpostimages.postID)
+														JOIN travelimage ON travelpostimages.ImageID = travelimage.ImageID
+											  WHERE  travelpost.UID = ?;"))) {
+				write2Error_Log("SELECT * in function getUserPosts()");
+				return;
+			}
+			
+			$sql_posts->bind_param("s",$ID);
+			$sql_posts->execute();
+			while($res_posts = $sql_posts->get_result())
+				$returned_Data[] = $row_posts;
+
+			$sql_posts->close();
+			return $res_country->fetch_assoc();			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getUserPosts(): " . $e);
 		}		
 	}
