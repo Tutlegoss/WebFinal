@@ -237,7 +237,7 @@ input#search {
 @media (max-width: 991.98px)
 {
 	#left {
-		height: 450px;
+		height: 375px;
 		overflow: scroll;
 	}
 }
