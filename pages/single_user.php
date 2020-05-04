@@ -4,14 +4,14 @@
 		<div class="row">
 			<?php include("../inc/leftPanel.inc.php"); ?>
 
-			<div class="col-12 col-lg-10 mt-3 mb-3" id="singleUser">
+			<div class="col-12 col-lg-10 mt-3 mb-3">
 				<?php 
 					if(isset($_GET['id'])) {
 						$data = getUserInfo($_GET['id']);
 
 						echo "<h2>$data[FirstName] $data[LastName]</h2>";
 	
-						echo '<div class="row justify-content-center">
+						echo '<div class="row justify-content-center" id="singleUser">
 							  <div class="col-6">
 							  <div class="card mx-auto">
 								  <table class="table mb-0"> 
