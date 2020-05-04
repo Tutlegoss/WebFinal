@@ -64,7 +64,7 @@
 							  </div>';
 					}
 				?>
-				<div class="row">
+				<div class="row d-flex justify-content-between">
 					<div class="col-12 mb-3">
 						<?php
 							$photos = getUserPhotos($_GET['id']);
