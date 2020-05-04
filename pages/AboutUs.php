@@ -27,8 +27,10 @@
 											<li>Navigation</li>
 											<li>About Us</li>
 											<li>Browse Travel Images</li>
-											<li>Browse Posts / Users</li>
-											<li>Display Single Country/City</li>
+											<li>Browse Posts</li>
+											<li>Browse Users</li>
+											<li>Display Single Country</li>
+											<li>Display Single City</li>
 											<li>Display Single User</li>
 										</ul>
 									</li>
@@ -71,15 +73,15 @@
 								<ul>
 									<li>Part I
 										<ul>
-											<li>Add To Favorites</li>
-											<li>View Favorites</li>
-											<li>Advanced Search</li>
+											<li style="color: #a32a2a">Add To Favorites</li>
+											<li style="color: #a32a2a">View Favorites</li>
+											<li style="color: #a32a2a">Advanced Search</li>
 										</ul>
 									</li>
 									<li>Part II
 										<ul>
-											<li>Add New Reviews</li>
-											<li>Admin Delete Reviews</li>
+											<li style="color: #a32a2a">Add New Reviews</li>
+											<li style="color: #a32a2a">Admin Delete Reviews</li>
 										</ul>
 									</li>
 								</ul>
