@@ -49,7 +49,7 @@ a{
 		echo "<h1>". $row['Title']."</h1><br>";
 		echo ' <div class="col-lg-4 right-align card mt-3" style="float:right">';
 		echo ' <div class="panel panel-info">';
-		echo '<div class="panel-heading"><button class="btn btnArt">&hearts; Add to Favorites List</button></div></div>';
+		echo '<div class="panel-heading">&hearts; Add to Favorites List</div></div>';
 		
 		echo '<div class="panel panel-info">';
 		echo '<div class="panel-heading">Post Details</div>';
@@ -108,9 +108,9 @@ a{
 	}
 	$r_t=mysqli_fetch_array($r_title);
 	echo $r_t['Title']; 
-	echo "<br><button class='btn btnArt' style='background-color:#509FFA; color:white;' type='button'>&#9432;View</button>";
+	echo "<br><button style='background-color:#509FFA; color:white;' type='button'>&#9432;View</button>";
 	//echo "<form action="" >"
-	echo "<button class='btn btnArt' style='background-color:green; color:white;' type='button'>&hearts; Favorite</button>";	
+	echo "<button style='background-color:green; color:white;' type='button'>&hearts; Favorite</button>";	
 	echo "</td>";
         
 }
@@ -119,7 +119,3 @@ echo "</table></div></div></aside></main>";
 require_once("../inc/footer.inc.php");
 ?>
 
-<script>
-	$(
-
-</script>
