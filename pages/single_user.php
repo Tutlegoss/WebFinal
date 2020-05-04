@@ -9,7 +9,7 @@
 					if(isset($_GET['id'])) {
 						$data = getUserInfo($_GET['id']);
 
-						echo "<h2>$data[FirstName] $data[LastName]</h2>";
+						echo "<h2 class='text-center'>$data[FirstName] $data[LastName]</h2>";
 	
 						echo '<div class="row justify-content-center" id="singleUser">
 							  <div class="col-6">
@@ -66,6 +66,7 @@
 				?>
 				<div class="row d-flex justify-content-between">
 					<div class="col-12 mb-3">
+						<div class="container-fluid">
 						<?php
 							$photos = getUserPhotos($_GET['id']);
 							$posts = getUserPosts($_GET['id']);
@@ -77,6 +78,7 @@
 									  </div>";
 							}
 						?>
+						</div>
 					</div>
 				</div>
 			</div>
