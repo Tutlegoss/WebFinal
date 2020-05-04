@@ -58,6 +58,8 @@
 										<ul>
 											<li>Registration page</li>
 											<li>Sign in page</li>
+											<li>Display username each page</li>
+											<li>Edit traveluserdetails by admin</li>
 										</ul>
 									</li>
 								</ul>
