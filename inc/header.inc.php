@@ -38,11 +38,15 @@ error_reporting(E_ALL);
 			<ul class="navbar-nav ml-auto">
 			<?php
 			if(isset($_SESSION["signedin"])==1){
-				if(isset($_SESSION["usertype"])=="Admin"){
+				if(isset($_SESSION["usertype"])){
+				$c=$_SESSION["usertype"];
+				if($c=="Admin"){
 				echo '	<li class="nav-item">
 				<a class="nav-link" href="/pages/tudupdate.php">Edit Users</a>
 			  		</li>';	
-				}}
+				}
+				}
+				}
 				?>
 			  <li class="nav-item">
 				<a class="nav-link" href="#">View Favorites List</a>
