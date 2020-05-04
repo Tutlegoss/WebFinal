@@ -329,7 +329,7 @@
 				$returned_Data[] = $row_photos;
 
 			$sql_photos->close();
-			return $res_country->fetch_assoc();			
+			return $returned_Data;		
 		}
 		catch (Exception $e) {
 			write2Error_Log("getUserPhotos(): " . $e);
