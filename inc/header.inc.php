@@ -43,6 +43,7 @@ error_reporting(E_ALL);
 				<a class="nav-link" href="/pages/tudupdate.php">Edit Users</a>
 			  		</li>';	
 				}
+				?>
 			  <li class="nav-item">
 				<a class="nav-link" href="#">View Favorites List</a>
 			  </li>
