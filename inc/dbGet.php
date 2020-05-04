@@ -312,7 +312,7 @@
 		global $conn;
 		try {
 			if(!($sql_photos = $conn->prepare("SELECT  Path, travelImage.ImageID as ImageID, travelimagedetails.Title as Title
-			                                   FROM   ((travelpost JOIN travelPostImages 
+			                                   FROM   ((travelpost JOIN travelpostimages 
 												        ON travelpost.postID = travelpostimages.postID)
 														JOIN travelimage ON travelpostimages.ImageID = travelimage.ImageID)
 														JOIN travelimagedetails ON travelimage.ImageID = travelimagedetails.ImageID
@@ -351,11 +351,13 @@
 			
 			$sql_posts->bind_param("s",$ID);
 			$sql_posts->execute();
-			while($res_posts = $sql_posts->get_result())
+			$res_posts = $sql_posts->get_result();
+			
+			while($row_posts = $res_posts->fetch_assoc())
 				$returned_Data[] = $row_posts;
 
 			$sql_posts->close();
-			return $res_country->fetch_assoc();			
+			return $returned_Data;			
 		}
 		catch (Exception $e) {
 			write2Error_Log("getUserPosts(): " . $e);
