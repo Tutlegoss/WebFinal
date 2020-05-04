@@ -311,7 +311,7 @@
 	{
 		global $conn;
 		try {
-			if(!($sql_photos = $conn->prepare("SELECT  Path, travelImage.ImageID as ImageID, travelimagedetails.Title as Title,
+			if(!($sql_photos = $conn->prepare("SELECT  Path, travelImage.ImageID as ImageID, travelimagedetails.Title as Title
 			                                   FROM   ((travelpost JOIN travelPostImages 
 												        ON travelpost.postID = travelpostimages.postID)
 														JOIN travelimage ON travelpostimages.ImageID = travelimage.ImageID)
