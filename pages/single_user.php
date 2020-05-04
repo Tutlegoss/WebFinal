@@ -64,9 +64,10 @@
 							  </div>';
 					}
 				?>
-				<div class="row d-flex justify-content-between">
+				<div class="row">
 					<div class="col-12 mb-3">
 						<div class="container-fluid">
+							<div class="d-flex justify-content-between">
 						<?php
 							$photos = getUserPhotos($_GET['id']);
 							$posts = getUserPosts($_GET['id']);
@@ -78,6 +79,7 @@
 									  </div>";
 							}
 						?>
+							</div>
 						</div>
 					</div>
 				</div>
