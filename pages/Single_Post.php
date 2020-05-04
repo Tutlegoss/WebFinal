@@ -116,6 +116,6 @@ a{
 }
 
 echo "</div></div></main>";
-//require_once("../inc/footer.inc.php");
+require_once("../inc/footer.inc.php");
 
 ?>
