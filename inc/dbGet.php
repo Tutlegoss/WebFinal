@@ -325,7 +325,7 @@
 			$sql_photos->execute();
 			while($res_photos = $sql_photos->get_result())
 				$returned_Data[] = $row_photos;
-
+			print_r($returned_Data);
 			$sql_photos->close();
 			return $res_country->fetch_assoc();			
 		}
