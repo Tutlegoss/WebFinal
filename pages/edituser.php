@@ -13,8 +13,9 @@ if(isset($_GET["uid"])){
 }
 require_once('../inc/dbconnect.php');
 if(isset($_SESSION["signedin"])==1){
-    if(isset($_SESSION["usertype"])=="Admin"){
-        echo "is treu";
+    if(isset($_SESSION["usertype"])){
+        $c=$_SESSION["usertype"];
+    if($c=="Admin"){
         if ( mysqli_connect_errno() ) {
             printf("Connect failed: %s\n", mysqli_connect_error());
     }
@@ -216,8 +217,9 @@ if(isset($_SESSION["signedin"])==1){
     }
 
     }
-    }
+    }else{header("Location: https://tutlegoss.com");}
 }
+}else {header("Location: https://tutlegoss.com");}
 
 
 
