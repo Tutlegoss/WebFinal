@@ -36,6 +36,11 @@ error_reporting(E_ALL);
 		<nav class="navbar navbar-expand">
 		  <div class="navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
+				<?php
+					if(isset($_SESSION["signedin"])==1){
+						echo '<p id="name">Welcome '.$_SESSION["user"].' </p>';
+					}
+				?>
 			<?php
 			if(isset($_SESSION["signedin"])==1){
 				if(isset($_SESSION["usertype"])){
@@ -92,14 +97,6 @@ error_reporting(E_ALL);
 							<a class="dropdown-item" href="/pages/Users.php">Users</a> 
 						</div>
 					</li> 
-				
-				<?php
-					if(isset($_SESSION["signedin"])==1){
-						echo '<li class ="nav-item ml-auto">';
-						echo '<a class="nav-link" href="#">Welcome '.$_SESSION["user"].' </a>';
-						echo'</li>';
-					}
-					?>
 				</ul>
 				<form action="" class="form-inline ml-auto mr-2" method="post" >
 					<label for="search"></label>

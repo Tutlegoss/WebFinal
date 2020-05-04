@@ -10,6 +10,43 @@
 	--libre:      'Libre Baskerville', serif;
 }
 
+#name {
+    font-size: 1.1rem;
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+@media (max-width: 834.98px)
+{
+    #name {
+        right: 40%; 
+        bottom: -84%;
+         
+    }
+}
+@media (min-width: 835px) and (max-width: 999.98px)
+{
+    #name {
+        Left: 5%; 
+        color: var(--navy);
+         
+    }
+}
+@media (min-width: 1000px) and (max-width: 1174.98px)
+{
+    #name {
+        right: 35%; 
+        bottom: -84%; 
+    }
+}
+@media (min-width: 1175px)
+{
+    #name {
+        right: 46%; 
+        bottom: -84%; 
+    }
+}
+
 /* Overall site style */
 /* --------------------------------------------------------*/
 html {

@@ -52,7 +52,7 @@ if(isset($_POST['search'])){
 					<div class="col-12 col-md-6 mt-3">		
 						<table class="table mb-0" id="indexRating">
 							<tr class="text-center">
-								<th colspan="2">Top 10 Images</td>
+								<th colspan="2">Top 10 Images</th>
 							</tr>
 							<?php 
 								$topImages = getTopRated(); 
@@ -83,7 +83,7 @@ if(isset($_POST['search'])){
 					<div class="col-12 col-md-6 mt-3">		
 						<table class="table mb-0" id="newAdditions">
 							<tr class="text-center">
-								<th colspan="2">New Additions</td>
+								<th colspan="2">New Additions</th>
 							</tr>
 							<?php 
 								$newPost = getNewAdditions(); 
@@ -104,7 +104,7 @@ if(isset($_POST['search'])){
 						</table>
 						<table class="table mt-3 mb-0" id="newAdditions">
 							<tr class="text-center">
-								<th colspan="2">Two Most Recent Posts</td>
+								<th colspan="2">Two Most Recent Posts</th>
 							</tr>
 							<?php 
 								$twoRecent = getTwoRatings(); 
