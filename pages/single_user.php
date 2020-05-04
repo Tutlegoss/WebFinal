@@ -73,7 +73,7 @@
 							foreach($photos as $p) {
 								echo "<div class='border rounded'>
 										<img src='/img/square-medium/$p[Path]' class='imagePadding imageSize img-responsive' alt='$p[Title]' >
-										<p class='mt-2'><a href='/pages/single_image.php?id=$p[ImageID]'>$[Title]</a></p>
+										<p class='mt-2'><a href='/pages/single_image.php?id=$p[ImageID]'>$p[Title]</a></p>
 									  </div>";
 							}
 						?>

@@ -299,7 +299,7 @@ input#search {
 	font-family: var(--libre);
 }
 
-#countryCity img, #singleUser img {
+#countryCity img {
 	border: 2px solid var(--navy);
 	 width: 600px;
 	height: 500px;
