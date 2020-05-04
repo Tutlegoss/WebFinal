@@ -55,6 +55,19 @@ error_reporting(E_ALL);
 			</ul>
 		  </div>
 		</nav>
+		<?php
+		if(isset($_SESSION["signedin"])==1){
+		echo '<nav class="navbar navbar-expand" style="margin-bottom: 5px">';
+		echo '<div class="navbar-collapse" id="navbarNav">';
+		echo '<ul class="navbar-nav ml-auto">';
+			echo '<li class ="nav-item">';
+			echo '<a class="nav-link" href="#">Welcome '.$_SESSION["user"].' </a>';
+			echo'</li>';
+			echo'</ul>';
+		echo '</div>';
+		echo '</nav>';
+		}
+		?>
 		<nav class="navbar navbar-expand-834" style="margin-top: -18px">
 			<a class="navbar-brand" href="/"><img src="/img/Travel_Logo.jpg" alt="Art Pallet Logo"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
