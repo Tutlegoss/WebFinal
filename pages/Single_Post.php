@@ -49,7 +49,7 @@ a{
 		echo "<h1>". $row['Title']."</h1><br>";
 		echo ' <div class="col-lg-4 right-align card mt-3" style="float:right">';
 		echo ' <div class="panel panel-info">';
-		echo '<div class="panel-heading">&hearts; Add to Favorites List</div></div>';
+		echo '<div class="panel-heading"><button class="btn btnArt">&hearts; Add to Favorites List</button></div></div>';
 		
 		echo '<div class="panel panel-info">';
 		echo '<div class="panel-heading">Post Details</div>';
@@ -116,6 +116,10 @@ a{
 }
 
 echo "</table></div></div></aside></main>";
-php require_once("../inc/footer.inc.php");
+require_once("../inc/footer.inc.php");
 ?>
 
+<script>
+	$(
+
+</script>
