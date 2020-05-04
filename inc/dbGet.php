@@ -311,7 +311,7 @@
 	{
 		global $conn;
 		try {
-			if(!($sql_photos = $conn->prepare("SELECT  Path, travelImage.ImageID as ImageID, travelimagedetails.Title as Title
+			if(!($sql_photos = $conn->prepare("SELECT  Path, travelimage.ImageID as ImageID, travelimagedetails.Title as Title
 			                                   FROM   ((travelpost JOIN travelpostimages 
 												        ON travelpost.postID = travelpostimages.postID)
 														JOIN travelimage ON travelpostimages.ImageID = travelimage.ImageID)
@@ -341,7 +341,7 @@
 		global $conn;
 		try {
 			if(!($sql_posts = $conn->prepare("SELECT DISTINCT(travelpost.Title) as Title, Message, travelpost.PostID as PostID
-			                                  FROM   (travelpost JOIN travelPostImages 
+			                                  FROM   (travelpost JOIN travelpostimages 
 												        ON travelpost.postID = travelpostimages.postID)
 														JOIN travelimage ON travelpostimages.ImageID = travelimage.ImageID
 											  WHERE  travelpost.UID = ?;"))) {
