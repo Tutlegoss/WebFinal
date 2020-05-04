@@ -10,8 +10,7 @@ if(isset($_SESSION["signedin"])==0){
     }
     $user=$_POST["user"];
     $Password=$_POST["password"];
-    echo "user is";
-    echo $user;
+    
     $sql=$conn->prepare("Select * from Accounts where User=?");
     $sql->bind_param("s",$user);
     $result=$sql->execute();
