@@ -42,7 +42,7 @@ error_reporting(E_ALL);
 				echo '	<li class="nav-item">
 				<a class="nav-link" href="/pages/tudupdate.php">Edit Users</a>
 			  		</li>';	
-				}
+				}}
 				?>
 			  <li class="nav-item">
 				<a class="nav-link" href="#">View Favorites List</a>
