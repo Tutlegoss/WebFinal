@@ -107,7 +107,7 @@
 												 '<h6 class="text-center">' + data[i].Title + '</h6>' +
 												 '</a></li>');
 					}
-					$('#imgFilter').append('</ul>');
+					//$('#imgFilter').append('</ul>');
 					if(data.length == 0)
 						$('#imgFilter').append('<h3 class="mt-3 text-center" id="empty">' + "Sorry, no results for selection. Try again." + "</h3>");
 

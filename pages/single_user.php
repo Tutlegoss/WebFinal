@@ -67,19 +67,37 @@
 				<div class="row">
 					<div class="col-12 mb-3">
 						<div class="container-fluid">
-							<div class="d-flex justify-content-between">
+						    <h2 class="text-center mt-5">Photo Contribution</h2>
+							<div class="d-flex justify-content-center">
 						<?php
 							$photos = getUserPhotos($_GET['id']);
-							$posts = getUserPosts($_GET['id']);
 							
+							echo '<ul class="mt-5 mb-3 list-inline text-center" id="displayImgs">';
 							foreach($photos as $p) {
-								echo "<div class='border rounded'>
-										<img src='/img/square-medium/$p[Path]' class='imagePadding imageSize img-responsive' alt='$p[Title]' >
-										<p class='mt-2'><a href='/pages/single_image.php?id=$p[ImageID]'>$p[Title]</a></p>
-									  </div>";
+							    echo "<li class='mb-2 list-inline-item px-2'>
+						                <a href='/pages/single_image.php?id=$p[ImageID]'' class='img-responsive'>
+										<img class='imgSize' src='/img/square-medium/$p[Path]' alt='$p[Title]'> 
+										<h5 class='text-center'>$p[Title]</h5>
+										</a></li>";
 							}
+							echo '</ul>';
 						?>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 mb-3">
+						<div class="container-fluid">
+						    <h2 class="text-center mt-5">Post Contribution</h2>
+    						<?php
+    							$posts = getUserPosts($_GET['id']);
+    							
+    							foreach($posts as $p) {
+    								echo "<a href='/pages/Single_Post.php?id=$p[PostID]'><h3>$p[Title]</h3></a>
+    									  <p class='mt-2'>".substr($p['Message'],0,450) . "..." . "</p>";
+    							}
+    						?>
 						</div>
 					</div>
 				</div>
