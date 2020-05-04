@@ -108,14 +108,13 @@ a{
 	}
 	$r_t=mysqli_fetch_array($r_title);
 	echo $r_t['Title']; 
-	echo "<br><button style='background-color:#509FFA; color:white;' type='button'>&#9432View</button>";
+	echo "<br><button class='btn btnArt' style='background-color:#509FFA; color:white;' type='button'>&#9432;View</button>";
 	//echo "<form action="" >"
-	echo "<button style='background-color:green; color:white;' type='button'>&hearts; Favorite</button>";	
+	echo "<button class='btn btnArt' style='background-color:green; color:white;' type='button'>&hearts; Favorite</button>";	
 	echo "</td>";
         
 }
 
-echo "</div></div></main>";
-//require_once("../inc/footer.inc.php");
-
+echo "</table></div></div></aside></main>";
+php require_once("../inc/footer.inc.php");
 ?>
