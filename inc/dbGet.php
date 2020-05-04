@@ -323,7 +323,7 @@
 
 			$sql_photos->bind_param("s",$ID);
 			$sql_photos->execute();
-			$res_photos = $sql_photos->get_result()
+			$res_photos = $sql_photos->get_result();
 			
 			while($row_photos = $res_photos->fetch_assoc())
 				$returned_Data[] = $row_photos;
