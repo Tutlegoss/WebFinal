@@ -34,10 +34,9 @@ if(isset($_SESSION["signedin"])==0){
 
     if($verify==1){
         $_SESSION["signedin"]=true;
-        $_SESSION["user"]=$_POST["user"];
-        $_SESSION["usertype"]=$_POST["type"];
+        $_SESSION["user"]=$row["User"];
+        $_SESSION["usertype"]=$row["Type"];
         $_SESSION["userid"]=$row["ID"];
-		
         header("Location: https://tutlegoss.com");
 
     }else{
