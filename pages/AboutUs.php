@@ -73,15 +73,15 @@
 								<ul>
 									<li>Part I
 										<ul>
-											<li style="color: #a32a2a">Add To Favorites</li>
-											<li style="color: #a32a2a">View Favorites</li>
-											<li style="color: #a32a2a">Advanced Search</li>
+											<li style="color: #db1212">Add To Favorites</li>
+											<li style="color: #db1212">View Favorites</li>
+											<li style="color: #db1212">Advanced Search</li>
 										</ul>
 									</li>
 									<li>Part II
 										<ul>
-											<li style="color: #a32a2a">Add New Reviews</li>
-											<li style="color: #a32a2a">Admin Delete Reviews</li>
+											<li style="color: #db1212">Add New Reviews</li>
+											<li style="color: #db1212">Admin Delete Reviews</li>
 										</ul>
 									</li>
 								</ul>
