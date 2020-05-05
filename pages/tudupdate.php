@@ -15,8 +15,8 @@ require_once('../inc/dbconnect.php');
 if(isset($_SESSION["signedin"])==1){
     if(isset($_SESSION["usertype"])){
         $c=$_SESSION["usertype"];
-        echo "is treu";
-        echo $_SESSION["usertype"];
+        
+        
         if($c=="Admin"){
         if ( mysqli_connect_errno() ) {
             printf("Connect failed: %s\n", mysqli_connect_error());
