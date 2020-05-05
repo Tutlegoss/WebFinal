@@ -185,6 +185,7 @@ echo "<p>".$row['Description']."</p>";
 		
 		document.getElementById(id).addEventListener("click", function(reviewNum) {
 				var remove = "remove" + reviewNum.toString();
+				console.log(remove);
 				var div = document.getElementById(remove);
 				div.remove();
 		});
