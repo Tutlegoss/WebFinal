@@ -380,7 +380,7 @@ input#search {
 	background-color: var(--navy);
 }
 
-#reviews h2 {
+#reviews h2, #nameReview {
 	color: var(--tan);
 }
 

@@ -134,15 +134,20 @@ echo "<p>".$row['Description']."</p>";
 			
 			foreach($reviews as $r)
 			{
+				echo "<p id='nameReview'>$r[FirstName] $r[LastName]</p>";
 				echo '<p>';
 				$planes = $r['Rating'];
 				$rem = 5 - $planes;
 				while($planes-- > 0) {
-					echo '<i class="fas fa-plane yellow"></i>';
+					echo '<i class="fas fa-plane yellow ml-1"></i>';
 				}
 				while($rem-- > 0) {
-					echo '<i class="fas fa-plane black"></i>';
+					echo '<i class="fas fa-plane black ml-1"></i>';
 				}
+				echo '</p>'
+				
+				echo "<p>$r[Review]</p>";
+				echo "<p>$r[ReviewTime]</p>";
 				
 			}
 		?>
