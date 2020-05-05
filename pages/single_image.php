@@ -149,8 +149,11 @@ echo "<p>".$row['Description']."</p>";
 							  echo '</p>';
 							
 							  echo "<p class='ml-2 mr-4' id='review'>$r[Review]</p>";
-							  echo "<p class='ml-2 mr-2' id='time'>$r[ReviewTime] 
-							            <button class='btn btnArt' id='deleteReview' type='button'>Delete</button></p>";
+							  echo "<p class='ml-2 mr-2' id='time'>$r[ReviewTime]";
+                              if(isset($_SESSION["usertype"]) && $_SESSION["usertype"] == "Admin") {							  
+							      echo "<button class='btn btnArt ml-3' id='deleteReview' type='button'>Delete</button>";
+							  }
+							  echo "</p>";
 				echo     '</div>
 				      </div>';
 				
