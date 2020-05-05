@@ -183,10 +183,10 @@ echo "<p>".$row['Description']."</p>";
 		var id = "deleteReview" + reviewNum.toString();
 				console.log("    "+id.toString());
 		
-		document.getElementById(id).addEventListener("click", function($reviewNum) {
+		document.getElementById(id).addEventListener("click", function(reviewNum) {
 				var remove = "remove" + reviewNum.toString();
-				console.log(remove);
-				$(remove).remove();
+				var div = document.getElementById(remove);
+				div.remove();
 		});
 	}
 </script>
