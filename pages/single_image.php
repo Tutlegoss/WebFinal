@@ -135,7 +135,7 @@ echo "<p>".$row['Description']."</p>";
 			foreach($reviews as $r)
 			{
 				echo '<div class="row mt-5">
-					      <div class"col-12">'; 
+					      <div class"col-12 ml-2 mr-2">'; 
 						      echo "<h6 id='nameReview'>$r[FirstName] $r[LastName]</h6>";
 							  echo '<p>';
 							  $planes = $r['Rating'];
