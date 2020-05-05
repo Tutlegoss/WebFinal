@@ -39,6 +39,7 @@
 											<li>Username Display</li>
 											<li>Advertisements</li>
 											<li>Home Page Two Most Recent</li>
+											<li>Display Reviews</li>
 										</ul>
 									</li>
 								</ul>
