@@ -181,10 +181,13 @@ echo "<p>".$row['Description']."</p>";
 	var reviewNum = <?php echo $idNum; ?>;
 	console.log(reviewNum);
 	while(--reviewNum >= 0){
-		console.log("    "+reviewNum.toString():
 		var id = "deleteReview" + reviewNum.toString();
+				console.log("    "+id.toString());
+
 		$(id).on("click", function() {
+			
 				var remove = "remove" + reviewNum.toString();
+				console.log(remove);
 				$(remove).remove();
 			});
 	}
