@@ -131,10 +131,12 @@ echo "<p>".$row['Description']."</p>";
 		<h2>Reviews</h2>
 		<?php 
 			$reviews = getReviews($_GET['id']); 
-			
+			$idNum = 0;
+			$imageID = array();
 			foreach($reviews as $r)
 			{
-				echo '<div class="row mt-5">
+				$imageID[$idNum] = $r['ImageRatingID'];
+				echo '<div class="row mt-5" id="remove$idNum">
 					      <div class"col-12">'; 
 						      echo "<h6 class='ml-2 mr-2 ' id='nameReview'>$r[FirstName] $r[LastName]</h6>";
 							  echo '<p class="ml-2 mr-2">';
@@ -151,12 +153,12 @@ echo "<p>".$row['Description']."</p>";
 							  echo "<p class='ml-2 mr-4' id='review'>$r[Review]</p>";
 							  echo "<p class='ml-2 mr-2' id='time'>$r[ReviewTime]";
                               if(isset($_SESSION["usertype"]) && $_SESSION["usertype"] == "Admin") {							  
-							      echo "<button class='btn btnArt ml-3' id='deleteReview' type='button'>Delete</button>";
+							      echo "<button class='btn btnArt ml-3' id='deleteReview$idNum' type='button'>Delete</button>";
 							  }
 							  echo "</p>";
 				echo     '</div>
 				      </div>';
-				
+				++$idNum;
 			}
 		?>
 	</div>
@@ -174,4 +176,15 @@ echo "<p>".$row['Description']."</p>";
   </div>
 </div>
 </main>
+
+<script>
+	var reviewNum = <?php echo $idNum; ?>;
+	while(--reviewNum >= 0){
+		var id = "deleteReview" + reviewNum.toString();
+		$(id).on("click", function() {
+				var remove = "remove" + reviewNum.toString();
+				$(remove).remove();
+			});
+	}
+</script>
 <?php require_once("../inc/footer.inc.php");?>
