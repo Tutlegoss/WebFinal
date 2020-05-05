@@ -373,3 +373,21 @@ input#search {
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
+
+/* single_image.php Styles */
+/* --------------------------------------------------------*/
+#reviews {
+	background-color: var(--navy);
+}
+
+#reviews h2 {
+	color: var(--tan);
+}
+
+#yellow {
+	color: #e6cd50;
+}
+
+#black {
+	color: black;
+}

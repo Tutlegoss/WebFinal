@@ -127,7 +127,7 @@ echo "<p>".$row['Description']."</p>";
 ?>
 
 <div class="row">
-	<div class="col-12" style="background-color: black">
+	<div class="col-12" id="reviews">
 		<h2>Reviews</h2>
 		<?php 
 			$reviews = getReviews($_GET['id']); 
@@ -138,10 +138,10 @@ echo "<p>".$row['Description']."</p>";
 				$planes = $r['Rating'];
 				$rem = 5 - $planes;
 				while($planes-- > 0) {
-					echo '<i class="fas fa-plane" style="color: yellow"></i>';
+					echo '<i class="fas fa-plane yellow"></i>';
 				}
 				while($rem-- > 0) {
-					echo '<i class="fas fa-plane" style="color: black"></i>';
+					echo '<i class="fas fa-plane black"></i>';
 				}
 				
 			}
