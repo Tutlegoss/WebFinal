@@ -35,6 +35,7 @@ if(isset($_SESSION["signedin"])==1){
     echo '<div class="container d-flex" style="margin: -40px">';
     echo '<div class="row justify-content-center align-self-center mx-auto">';
     echo '<div class="col-12 col-md-8 col-lg-6">';
+    echo '<br>';
     echo '<table align=justify style="top:1000px">';
     echo '<td>';
     foreach($resultarray as $row){
