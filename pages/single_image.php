@@ -183,13 +183,12 @@ echo "<p>".$row['Description']."</p>";
 	while(--reviewNum >= 0){
 		var id = "deleteReview" + reviewNum.toString();
 				console.log("    "+id.toString());
-
-		$(id).on("click", function() {
-			
+		
+		document.getElementById(id).addEventListener("click", function() {
 				var remove = "remove" + reviewNum.toString();
 				console.log(remove);
 				$(remove).remove();
-			});
+		});
 	}
 </script>
 <?php require_once("../inc/footer.inc.php");?>
