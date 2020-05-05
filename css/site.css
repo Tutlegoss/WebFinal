@@ -380,8 +380,14 @@ input#search {
 	background-color: var(--navy);
 }
 
-#reviews h2, #nameReview {
+#reviews h2 {
 	color: var(--tan);
+}
+
+#nameReview {
+	color: white;
+	font-size: 1.2rem;
+	font-family: var(--libre), 'cursive';
 }
 
 .yellow {
@@ -390,4 +396,12 @@ input#search {
 
 .black {
 	color: black;
+}
+
+#review {
+	color: 
+}
+
+#time {
+	color: var(--brown);
 }
