@@ -134,20 +134,24 @@ echo "<p>".$row['Description']."</p>";
 			
 			foreach($reviews as $r)
 			{
-				echo "<h6 class='mt-3' id='nameReview'>$r[FirstName] $r[LastName]</h6>";
-				echo '<p>';
-				$planes = $r['Rating'];
-				$rem = 5 - $planes;
-				while($planes-- > 0) {
-					echo '<i class="fas fa-plane yellow ml-1"></i>';
-				}
-				while($rem-- > 0) {
-					echo '<i class="fas fa-plane black ml-1"></i>';
-				}
-				echo '</p>';
-				
-				echo "<p id='review'>$r[Review]</p>";
-				echo "<p id='time'>$r[ReviewTime]</p>";
+				echo '<div class="row mt-3">
+					      <div class"col-12">'; 
+						      echo "<h6 id='nameReview'>$r[FirstName] $r[LastName]</h6>";
+							  echo '<p>';
+							  $planes = $r['Rating'];
+							  $rem = 5 - $planes;
+							  while($planes-- > 0) {
+							      echo '<i class="fas fa-plane yellow ml-1"></i>';
+						      }
+							  while($rem-- > 0) {
+								  echo '<i class="fas fa-plane black ml-1"></i>';
+							  }
+							  echo '</p>';
+							
+							  echo "<p id='review'>$r[Review]</p>";
+							  echo "<p id='time'>$r[ReviewTime]</p>";
+				echo     '</div>
+				      </div>';
 				
 			}
 		?>
