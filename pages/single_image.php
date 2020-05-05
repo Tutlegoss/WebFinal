@@ -134,7 +134,7 @@ echo "<p>".$row['Description']."</p>";
 			
 			foreach($reviews as $r)
 			{
-				echo "<h6 id='nameReview'>$r[FirstName] $r[LastName]</h6>";
+				echo "<h6 id='nameReview mt-3'>$r[FirstName] $r[LastName]</h6>";
 				echo '<p>';
 				$planes = $r['Rating'];
 				$rem = 5 - $planes;
