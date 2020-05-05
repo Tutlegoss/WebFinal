@@ -135,9 +135,9 @@ echo "<p>".$row['Description']."</p>";
 			foreach($reviews as $r)
 			{
 				echo '<div class="row mt-5">
-					      <div class"col-12 ml-2 mr-2">'; 
-						      echo "<h6 id='nameReview'>$r[FirstName] $r[LastName]</h6>";
-							  echo '<p>';
+					      <div class"col-12">'; 
+						      echo "<h6 class='ml-2 mr-2 ' id='nameReview'>$r[FirstName] $r[LastName]</h6>";
+							  echo '<p class="ml-2 mr-2">';
 							  $planes = $r['Rating'];
 							  $rem = 5 - $planes;
 							  while($planes-- > 0) {
@@ -148,8 +148,8 @@ echo "<p>".$row['Description']."</p>";
 							  }
 							  echo '</p>';
 							
-							  echo "<p id='review'>$r[Review]</p>";
-							  echo "<p id='time'>$r[ReviewTime]</p>";
+							  echo "<p class='ml-2 mr-4' id='review'>$r[Review]</p>";
+							  echo "<p class='ml-2 mr-2' id='time'>$r[ReviewTime]</p>";
 				echo     '</div>
 				      </div>';
 				
