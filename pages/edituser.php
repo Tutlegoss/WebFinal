@@ -21,7 +21,7 @@ if(isset($_SESSION["signedin"])==1){
     }
 
     if(isset($_POST["edit"])){
-        echo $_POST["FirstName"];
+        
         if($_POST["FirstName"]!=""){
             $fn=$_POST["FirstName"];
             $sql1=$conn->prepare("update traveluserdetails Set FirstName = ? where UID = $uid");
@@ -31,12 +31,10 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error1:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["LastName"];
+       
         if($_POST["LastName"]!=""){
             $ln=$_POST["LastName"];
-            echo "inputting";
-            echo $ln;
-            echo $uid;
+           
             $sql1=$conn->prepare("update traveluserdetails Set LastName = ? where UID = '$uid'");
             $sql1->bind_param("s",$ln);
             $check=$sql1->execute();
@@ -44,7 +42,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error2:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["Address"];
+        
         if($_POST["Address"]!=""){
             $Ad=$_POST["Address"];
             $sql1=$conn->prepare("update traveluserdetails Set Address = ? where UID = $uid");
@@ -54,7 +52,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error3:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["City"];
+        
         if($_POST["City"]!=""){
             $ct=$_POST["City"];
             $sql1=$conn->prepare("update traveluserdetails Set City = ? where UID = $uid");
@@ -64,7 +62,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error4:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["Region"];
+        
         if($_POST["Region"]!=""){
             $rg=$_POST["Region"];
             $sql1=$conn->prepare("update traveluserdetails Set Region = ? where UID = $uid");
@@ -74,7 +72,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error5:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["Country"];
+        
         if($_POST["Country"]!=""){
             $cnty=$_POST["Country"];
             $sql1=$conn->prepare("update traveluserdetails Set Country = ? where UID = $uid");
@@ -84,7 +82,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error6:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["Postal"];
+        
         if($_POST["Postal"]!=""){
             $pt=$_POST["Postal"];
             $sql1=$conn->prepare("update traveluserdetails Set Postal= ? where UID = $uid");
@@ -94,7 +92,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error7:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["Phone"];
+        
         if($_POST["Phone"]!=""){
             $pn=$_POST["Phone"];
             $sql1=$conn->prepare("update traveluserdetails Set Phone= ? where UID = $uid");
@@ -104,7 +102,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error8:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["Email"];
+        
         if($_POST["Email"]!=""){
             $em=$_POST["Email"];
             $sql1=$conn->prepare("update traveluserdetails Set Email = ? where UID = $uid");
@@ -114,7 +112,7 @@ if(isset($_SESSION["signedin"])==1){
 					printf("error9:%s\n", mysqli_error($conn));
 			}
         }
-        echo $_POST["Privacy"];
+        
         if($_POST["Privacy"]!=""){
             $py=$_POST["Privacy"];
             $sql1=$conn->prepare("update traveluserdetails Set Privacy = ? where UID = $uid");
