@@ -179,12 +179,11 @@ echo "<p>".$row['Description']."</p>";
 
 <script>
 	var reviewNum = <?php echo $idNum; ?>;
-	console.log(reviewNum);
 	while(--reviewNum >= 0){
 		var id = "deleteReview" + reviewNum.toString();
 				console.log("    "+id.toString());
 		
-		document.getElementById(id).addEventListener("click", function() {
+		document.getElementById(id).addEventListener("click", function($reviewNum) {
 				var remove = "remove" + reviewNum.toString();
 				console.log(remove);
 				$(remove).remove();
