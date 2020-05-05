@@ -10,8 +10,8 @@ require_once("../inc/header.inc.php");
 
 
 require_once('../inc/dbconnect.php');
-echo "a page";
-echo $_SESSION["usertype"];
+
+
 if(isset($_SESSION["signedin"])==1){
     if(isset($_SESSION["usertype"])){
         $c=$_SESSION["usertype"];
