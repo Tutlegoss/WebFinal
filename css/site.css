@@ -384,10 +384,10 @@ input#search {
 	color: var(--tan);
 }
 
-#yellow {
+.yellow {
 	color: #e6cd50;
 }
 
-#black {
+.black {
 	color: black;
 }
