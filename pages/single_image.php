@@ -144,7 +144,7 @@ echo "<p>".$row['Description']."</p>";
 				while($rem-- > 0) {
 					echo '<i class="fas fa-plane black ml-1"></i>';
 				}
-				echo '</p>'
+				echo '</p>';
 				
 				echo "<p>$r[Review]</p>";
 				echo "<p>$r[ReviewTime]</p>";
