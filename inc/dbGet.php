@@ -363,3 +363,30 @@
 			write2Error_Log("getUserPosts(): " . $e);
 		}		
 	}
+	
+/* Function for single_image.php */
+	function getReviews($ID)
+	{
+		global $conn;
+		try {
+			if(!($sql_posts = $conn->prepare("SELECT *
+			                                  FROM travelimagerating as ti JOIN traveluserdetails as tud ON ti.UID = tud.UID
+											  WHERE ImageID = ?"))) {
+				write2Error_Log("SELECT * in function getReviews()");
+				return;
+			}
+			
+			$sql_posts->bind_param("i",$ID);
+			$sql_posts->execute();
+			$res_posts = $sql_posts->get_result();
+			
+			while($row_posts = $res_posts->fetch_assoc())
+				$returned_Data[] = $row_posts;
+
+			$sql_posts->close();
+			return $returned_Data;			
+		}
+		catch (Exception $e) {
+			write2Error_Log("getReviews(): " . $e);
+		}		
+	}

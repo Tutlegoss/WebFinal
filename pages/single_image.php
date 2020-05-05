@@ -126,6 +126,28 @@ echo "<p>".$row['Description']."</p>";
 
 ?>
 
+<div class="row">
+	<div class="col-12">
+		<h2>Reviews</h2>
+		<?php 
+			$reviews = getReviews(); 
+			
+			foreach($reviews as $r)
+			{
+				echo '<p>'
+				$planes = $r['Rating'];
+				$rem = 5 - $planes;
+				while($planes-- > 0) {
+					echo '<i class="fas fa-plane" style="color: yellow"></i>'
+				}
+				while($rem-- > 0) {
+					echo '<i class="fas fa-plane" style="color: black"></i>'
+				}
+				
+			}
+		?>
+	</div>
+</div>
 </div>
 
 <div class="modal fade popup"  role="dialog"  aria-hidden="true">
@@ -139,10 +161,4 @@ echo "<p>".$row['Description']."</p>";
   </div>
 </div>
 </main>
-
-<div class="row">
-	<div class="col-12">
-		
-	</div>
-</div>
 <?php require_once("../inc/footer.inc.php");?>
