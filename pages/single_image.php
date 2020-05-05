@@ -149,7 +149,8 @@ echo "<p>".$row['Description']."</p>";
 							  echo '</p>';
 							
 							  echo "<p class='ml-2 mr-4' id='review'>$r[Review]</p>";
-							  echo "<p class='ml-2 mr-2' id='time'>$r[ReviewTime]</p>";
+							  echo "<p class='ml-2 mr-2' id='time'>$r[ReviewTime] 
+							            <button class='btn btnArt' id='deleteReview' type='button'>Delete</button></p>";
 				echo     '</div>
 				      </div>';
 				
